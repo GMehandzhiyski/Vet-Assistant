@@ -23,5 +23,26 @@
             public const int DetailsLocationMaxLenght = 500;
         }
 
+        public static class Clinic
+        {
+            public const int NameMinLenght = 2;
+            public const int NameMaxLenght = 150;
+
+            public const int TownMinLenght = 2;
+            public const int TownMaxLenght = 200;
+
+            public const int AddressMinLenght = 2;
+            public const int AddressMaxLenght = 200;
+
+            public const int EmailMinLenght = 5;
+            public const int EmailMaxLenght = 100;
+
+            public const int PhoneNumberMinLenght = 2;
+            public const int PhoneNumberMaxLenght = 100;
+
+            public const int WorkingTimeMinLenght = 2;
+            public const int WorkingTimeMaxLenght = 100;
+        }
+
     }
 }

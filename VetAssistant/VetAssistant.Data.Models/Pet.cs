@@ -30,8 +30,8 @@ namespace VetAssistant.Data.Models
         public Guid GenderId { get; set; }
 
         [Required]
-        [ForeignKey(nameof(GenderId))]
         [Comment("Gender")]
+        [ForeignKey(nameof(GenderId))]
         public Gender Gender { get; set; } = null!;
 
         [Required]
@@ -39,8 +39,8 @@ namespace VetAssistant.Data.Models
         public Guid CountryId { get; set; }
 
         [Required]
-        [ForeignKey(nameof(CountryId))]
         [Comment("Country")]
+        [ForeignKey(nameof(CountryId))]
         public Country Country { get; set; } = null!;
 
         [Comment("DateOfBirth")]
@@ -64,7 +64,7 @@ namespace VetAssistant.Data.Models
         [MaxLength(DetailsLocationMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
-        [Comment("SoftDeleted")]
+        [Comment("SoftDeletedPet")]
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfUserPet")]
