@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Web", "VetAssistant.Web\VetAssistant.Web.csproj", "{72DB763C-4D16-4E15-A1A9-AE38A1640354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Web", "VetAssistant.Web\VetAssistant.Web.csproj", "{72DB763C-4D16-4E15-A1A9-AE38A1640354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Web.ViewModels", "VetAssistant.Web.ViewModels\VetAssistant.Web.ViewModels.csproj", "{179D418E-F0FD-42E3-9EDD-92EF008FEC2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Web.ViewModels", "VetAssistant.Web.ViewModels\VetAssistant.Web.ViewModels.csproj", "{179D418E-F0FD-42E3-9EDD-92EF008FEC2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Common", "VetAssistant.Common\VetAssistant.Common.csproj", "{72E49570-10F2-4012-919E-DC57FEE1530F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Common", "VetAssistant.Common\VetAssistant.Common.csproj", "{72E49570-10F2-4012-919E-DC57FEE1530F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Data.Models", "VetAssistant.Data.Models\VetAssistant.Data.Models.csproj", "{C3FC2FEF-BF7E-4617-929C-447EF9A8ECE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Data.Models", "VetAssistant.Data.Models\VetAssistant.Data.Models.csproj", "{C3FC2FEF-BF7E-4617-929C-447EF9A8ECE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F6372B55-E345-413B-BCA0-5A96F3230CA7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{541B4906-0D7E-4C73-A31F-97D6A211D620}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Data", "VetAssistant.Data\VetAssistant.Data.csproj", "{6B725A01-ADAF-44B6-83A8-8D201CC16193}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Web.Infrastructure", "VetAssistant.Web.Infrastructure\VetAssistant.Web.Infrastructure.csproj", "{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{C3FC2FEF-BF7E-4617-929C-447EF9A8ECE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3FC2FEF-BF7E-4617-929C-447EF9A8ECE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3FC2FEF-BF7E-4617-929C-447EF9A8ECE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B725A01-ADAF-44B6-83A8-8D201CC16193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B725A01-ADAF-44B6-83A8-8D201CC16193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B725A01-ADAF-44B6-83A8-8D201CC16193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B725A01-ADAF-44B6-83A8-8D201CC16193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +57,8 @@ Global
 		{72DB763C-4D16-4E15-A1A9-AE38A1640354} = {F6372B55-E345-413B-BCA0-5A96F3230CA7}
 		{179D418E-F0FD-42E3-9EDD-92EF008FEC2D} = {F6372B55-E345-413B-BCA0-5A96F3230CA7}
 		{C3FC2FEF-BF7E-4617-929C-447EF9A8ECE1} = {541B4906-0D7E-4C73-A31F-97D6A211D620}
+		{6B725A01-ADAF-44B6-83A8-8D201CC16193} = {541B4906-0D7E-4C73-A31F-97D6A211D620}
+		{03533EAC-8E52-4036-A9FA-E8DA8938FA7D} = {F6372B55-E345-413B-BCA0-5A96F3230CA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {656B5648-4B9C-4859-8D94-6B3EF1CC4048}

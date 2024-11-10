@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VetAssistant.Common\VetAssistant.Common.csproj" />
-    <ProjectReference Include="..\VetAssistant.Web\VetAssistant.Web.csproj" />
   </ItemGroup>
 
 </Project>
