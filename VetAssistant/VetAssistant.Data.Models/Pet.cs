@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static VetAssistant.Common.ValidationConstants.Pet;
 
 namespace VetAssistant.Data.Models
 {
@@ -11,16 +12,17 @@ namespace VetAssistant.Data.Models
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
-        [MaxLength(100)]
         [Comment("PetName")]
+        [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        [MaxLength(100)]
         [Comment("PetSpecies")]
+        [MaxLength(SpeciesMaxLenght)]
         public string Species { get; set; } = string.Empty;
 
-        [MaxLength(100)]
+        [Comment("PetBreed")]
+        [MaxLength(BreedMaxLenght)]
         public string Breed { get; set; } = string.Empty;
 
         [Required]
@@ -48,17 +50,18 @@ namespace VetAssistant.Data.Models
         public int PassportNumber { get; set; }
 
         [Comment("TransponderAlphanumericCode")]
-        [MaxLength(25)]
+        [MaxLength(TransponderCodeLocationMaxLenght)]
         public string TransponderCode { get; set; } = string.Empty;
 
         [Comment("LocationOfTheTransponder")]
-        [MaxLength(100)]
+        [MaxLength(TransponderLocationMaxLenght)]
         public string TransponderLocation { get; set; } = string.Empty;
 
         [Comment("PetImage")]
         public string ImageUrl { get; set; } = string.Empty;
 
         [Comment("AdditionalDetails")]
+        [MaxLength(DetailsLocationMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
         [Comment("SoftDeleted")]
