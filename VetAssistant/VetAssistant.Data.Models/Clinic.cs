@@ -17,7 +17,7 @@ namespace VetAssistant.Data.Models
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        [Comment("Town")]
+        [Comment("ClinicTown")]
         [MaxLength(TownMaxLenght)]
         public string Town { get; set; } = string.Empty;
 
@@ -50,7 +50,7 @@ namespace VetAssistant.Data.Models
         [MaxLength(WorkingTimeMaxLenght)]
         public string WorkingTime { get; set; } = null!;
 
-        [Comment("SoftDeletedClinic")]
+        [Comment("ClicnicSoftDeleted")]
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfClinicsDoctors")]

@@ -43,28 +43,28 @@ namespace VetAssistant.Data.Models
         [ForeignKey(nameof(CountryId))]
         public Country Country { get; set; } = null!;
 
-        [Comment("DateOfBirth")]
+        [Comment("PetDateOfBirth")]
         public DateTime DateOfBirth { get; set; }
 
-        [Comment("NumberOfPassport")]
+        [Comment("PetNumberOfPassport")]
         public int PassportNumber { get; set; }
 
-        [Comment("TransponderAlphanumericCode")]
+        [Comment("PetTransponderAlphanumericCode")]
         [MaxLength(TransponderCodeLocationMaxLenght)]
         public string TransponderCode { get; set; } = string.Empty;
 
-        [Comment("LocationOfTheTransponder")]
+        [Comment("PetLocationOfTheTransponder")]
         [MaxLength(TransponderLocationMaxLenght)]
         public string TransponderLocation { get; set; } = string.Empty;
 
         [Comment("PetImage")]
         public string ImageUrl { get; set; } = string.Empty;
 
-        [Comment("AdditionalDetails")]
+        [Comment("PetAdditionalDetails")]
         [MaxLength(DetailsLocationMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
-        [Comment("SoftDeletedPet")]
+        [Comment("PetSoftDeleted")]
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfUserPet")]
