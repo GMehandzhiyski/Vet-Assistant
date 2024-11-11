@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VetAssistant.Common\VetAssistant.Common.csproj" />
+    <ProjectReference Include="..\VetAssistant.Data.Models\VetAssistant.Data.Models.csproj" />
     <ProjectReference Include="..\VetAssistant.Data\VetAssistant.Data.csproj" />
     <ProjectReference Include="..\VetAssistant.Web.ViewModels\VetAssistant.Web.ViewModels.csproj" />
   </ItemGroup>

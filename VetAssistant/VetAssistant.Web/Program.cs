@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using VetAssistant.Data;
+using VetAssistant.Data.Models;
 
 namespace VetAssistant.Web
 {
@@ -17,8 +18,18 @@ namespace VetAssistant.Web
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services
+                .AddDefaultIdentity<IdentityUser>(options =>
+                    options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<VetAssistantDbContext>();
+
+            //Identity Service
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+            {
+            })
+                .AddRoles<IdentityRole<Guid>>()
+                .AddEntityFrameworkStores<VetAssistantDbContext>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
@@ -40,11 +51,14 @@ namespace VetAssistant.Web
 
             app.UseRouting();
 
+            //Authentication and Authorization middleware
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
             app.MapRazorPages();
 
             app.Run();
