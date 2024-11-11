@@ -5,6 +5,7 @@ using static VetAssistant.Common.ValidationConstants.Pet;
 
 namespace VetAssistant.Data.Models
 {
+    [PrimaryKey(nameof(Id), nameof(CountryId), nameof(GenderId))]
     public class Pet
     {
         [Key]
@@ -70,7 +71,7 @@ namespace VetAssistant.Data.Models
         [Comment("CollectionOfUserPet")]
         public virtual ICollection<UserPet> UsersPets { get; set; } = new List<UserPet>();
 
-        [Comment("CollectionOfUserPet")]
+        [Comment("CollectionOfDoctorsPets")]
 
         public virtual ICollection<DoctorPet> DoctorsPets { get; set; } = new List<DoctorPet>();
 

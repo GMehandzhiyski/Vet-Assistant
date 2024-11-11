@@ -5,6 +5,8 @@ using static VetAssistant.Common.ValidationConstants.Clinic;
 
 namespace VetAssistant.Data.Models
 {
+    [PrimaryKey((nameof(Id)), nameof(CountryId))]
+
     public class Clinic
     {
         [Key]
