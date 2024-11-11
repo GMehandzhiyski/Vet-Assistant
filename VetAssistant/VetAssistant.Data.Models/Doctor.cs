@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VetAssistant.Data.Models
 {
+    [PrimaryKey(nameof(Id), nameof(CountryId))]
+
     public class Doctor
     {
         [Key]

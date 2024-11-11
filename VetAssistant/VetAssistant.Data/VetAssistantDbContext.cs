@@ -19,6 +19,11 @@
 
         }
 
+        //to add DbSets
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }

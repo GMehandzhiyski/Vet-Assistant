@@ -16,12 +16,19 @@ namespace VetAssistant.Web
 
             builder.Services.AddDbContext<VetAssistantDbContext>(options =>
                 options.UseSqlServer(connectionString));
+
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services
-                .AddDefaultIdentity<IdentityUser>(options =>
-                    options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<VetAssistantDbContext>();
+            //builder.Services
+            //    .AddDefaultIdentity<IdentityUser>(options =>
+            //        options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<VetAssistantDbContext>();
+
+            //Change Default Identity User with new Application User
+            //builder.Services
+            //  .AddDefaultIdentity<ApplicationUser>(options =>
+            //      options.SignIn.RequireConfirmedAccount = true)
+            //  .AddEntityFrameworkStores<VetAssistantDbContext>();
 
             //Identity Service
             builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
@@ -59,6 +66,7 @@ namespace VetAssistant.Web
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            // Add routing to Identity Razor Pages
             app.MapRazorPages();
 
             app.Run();
