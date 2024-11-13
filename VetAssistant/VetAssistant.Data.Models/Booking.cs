@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace VetAssistant.Data.Models
 {
     [PrimaryKey(nameof(Id), nameof(UserId), nameof(PetId), nameof(DoctorId), nameof(TypeInspectionId))]
-    public class BookingIntervention
+    public class Booking
     {
         [Key]
         [Comment("BookingIntervention")]
