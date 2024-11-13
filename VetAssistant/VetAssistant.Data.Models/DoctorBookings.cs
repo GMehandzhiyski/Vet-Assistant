@@ -1,13 +1,25 @@
-﻿namespace VetAssistant.Data.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace VetAssistant.Data.Models
 {
     public class DoctorBookings
     {
+        [Required]
+        [Comment("DoctorId")]
         public Guid DoctorId { get; set; }
 
-        public virtual Doctor DoctorName { get; set; } = null!;
 
+        [Required]
+        [Comment("Doctor")]
+        public virtual Doctor Doctor { get; set; } = null!;
+
+        [Required]
+        [Comment("BookingId")]
         public Guid BookingId { get; set; }
 
-        public virtual Booking BookingName { get; set; } = null!;
+        [Required]
+        [Comment("Booking")]
+        public virtual Booking Booking { get; set; } = null!;
     }
 }
