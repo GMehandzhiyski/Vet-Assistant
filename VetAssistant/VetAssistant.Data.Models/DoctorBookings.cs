@@ -2,10 +2,12 @@
 {
     public class DoctorBookings
     {
-        public virtual Guid DoctorId { get; set; }
+        public Guid DoctorId { get; set; }
 
-        public virtual string DoctorName { get; set; } = null!;
+        public virtual Doctor DoctorName { get; set; } = null!;
 
+        public Guid BookingId { get; set; }
 
+        public virtual Booking BookingName { get; set; } = null!;
     }
 }
