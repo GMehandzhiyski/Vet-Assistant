@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VetAssistant.Data.Models
 {
+    [PrimaryKey(nameof(Id), nameof(UserId), nameof(PetId), nameof(DoctorId), nameof(TypeInspectionId))]
     public class BookingIntervention
     {
         [Key]
@@ -21,7 +22,7 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("User")]
         [ForeignKey(nameof(UserId))]
-        public ApplicationUser User { get; set; } = null!;
+        public UserDetails UserDetails { get; set; } = null!;
 
         [Required]
         [Comment("PetId")]
@@ -32,8 +33,30 @@ namespace VetAssistant.Data.Models
         [ForeignKey(nameof(PetId))]
         public Pet Pet { get; set; } = null!;
 
-        //[Required]
-        // [Comment("")]
-        // To be continued
+        [Required]
+        [Comment("DoctorId")]
+        public Guid DoctorId { get; set; }
+
+        [Required]
+        [Comment("Doctor")]
+        [ForeignKey(nameof(DoctorId))]
+        public Doctor Doctor { get; set; } = null!;
+
+        [Required]
+        [Comment("TypeOfInspection")]
+        public Guid TypeInspectionId { get; set; }
+
+        [Required]
+        [Comment("TypeOfInspection")]
+        [ForeignKey(nameof(TypeInspectionId))]
+        public TypeInspection TypeInspection { get; set; } = null!;
+
+        [Required]
+        [Comment("Description")]
+        public string Description { get; set; } = string.Empty;
+
+        [Comment("BookingInterventionSoftDeleted")]
+        public bool IsDeleted { get; set; } = false;
+
     }
 }

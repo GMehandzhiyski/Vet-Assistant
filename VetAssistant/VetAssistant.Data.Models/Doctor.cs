@@ -53,7 +53,7 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("DoctorEducation")]
         [MaxLength(200)]
-        public string Еducation { get; set; } = string.Empty;
+        public string Education { get; set; } = string.Empty;
 
         [Required]
         [Comment("DoctorSpecialty")]
@@ -73,7 +73,7 @@ namespace VetAssistant.Data.Models
         public string ImageUrl { get; set; } = string.Empty;
 
         [Comment("DoctorSoftDelete")]
-        public bool IsDelete { get; set; } = false;
+        public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfClinicDoctor")]
         public virtual ICollection<ClinicDoctor> ClinicsDoctors { get; set; } = new List<ClinicDoctor>();

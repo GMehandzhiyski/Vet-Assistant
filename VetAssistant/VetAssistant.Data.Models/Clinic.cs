@@ -12,6 +12,9 @@ namespace VetAssistant.Data.Models
         [Key]
         [Comment("ClinicId")]
         public Guid Id { get; set; } = Guid.NewGuid();
+        /// <summary>
+        /// Parametyr tampening
+        /// </summary>
 
         [Required]
         [Comment("ClinicName")]
@@ -52,7 +55,7 @@ namespace VetAssistant.Data.Models
         [MaxLength(WorkingTimeMaxLenght)]
         public string WorkingTime { get; set; } = null!;
 
-        [Comment("ClicnicSoftDeleted")]
+        [Comment("ClinicSoftDeleted")]
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfClinicsDoctors")]

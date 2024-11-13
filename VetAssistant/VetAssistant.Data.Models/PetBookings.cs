@@ -1,6 +1,6 @@
 ﻿namespace VetAssistant.Data.Models
 {
-    internal class UserBookingIntervention
+    public class PetBookings
     {
     }
 }
