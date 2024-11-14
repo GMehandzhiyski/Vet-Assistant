@@ -19,7 +19,7 @@
 
         }
 
-        //to add DbSets
+        public DbSet<>
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

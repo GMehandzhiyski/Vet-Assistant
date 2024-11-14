@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static VetAssistant.Common.ValidationConstants.UserDetails;
 
 namespace VetAssistant.Data.Models
 {
@@ -12,17 +13,17 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("FirstName")]
-        [MaxLength(50)]
+        [MaxLength(FirstNameMaxLenght)]
         public string FirstName { get; set; } = string.Empty;
 
         [Required]
         [Comment("LastName")]
-        [MaxLength(50)]
+        [MaxLength(LastNameMaxLenght)]
         public string LastName { get; set; } = string.Empty;
 
         [Required]
         [Comment("PhoneNumber")]
-        [MaxLength(50)]
+        [MaxLength(PhoneNumberMaxLenght)]
         public string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
@@ -34,15 +35,14 @@ namespace VetAssistant.Data.Models
         [ForeignKey(nameof(CountryId))]
         public Country Country { get; set; } = null!;
 
-
         [Required]
         [Comment("Town")]
-        [MaxLength(50)]
+        [MaxLength(TownMaxLenght)]
         public string Town { get; set; } = string.Empty;
 
         [Required]
         [Comment("Address")]
-        [MaxLength(50)]
+        [MaxLength(AddressMaxLenght)]
         public string Address { get; set; } = null!;
 
         [Required]

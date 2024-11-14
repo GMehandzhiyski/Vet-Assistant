@@ -9,7 +9,7 @@ namespace VetAssistant.Data.Models
     public class Booking
     {
         [Key]
-        [Comment("BookingIntervention")]
+        [Comment("BookingInterventionId")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]

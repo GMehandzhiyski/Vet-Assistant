@@ -38,7 +38,7 @@
             public const int EmailMaxLenght = 100;
 
             public const int PhoneNumberMinLenght = 2;
-            public const int PhoneNumberMaxLenght = 100;
+            public const int PhoneNumberMaxLenght = 20;
 
             public const int WorkingTimeMinLenght = 2;
             public const int WorkingTimeMaxLenght = 100;
@@ -99,6 +99,33 @@
         {
             public const int NameMinLenght = 3;
             public const int NameMaxLenght = 200;
+        }
+
+        public static class UserDetails
+        {
+            public const int FirstNameMinLenght = 3;
+            public const int FirstNameMaxLenght = 20;
+
+            public const int LastNameMinLenght = 3;
+            public const int LastNameMaxLenght = 20;
+
+            public const int PhoneNumberMinLenght = 3;
+            public const int PhoneNumberMaxLenght = 20;
+
+            public const int TownMinLenght = 2;
+            public const int TownMaxLenght = 80;
+
+            public const int AddressMinLenght = 2;
+            public const int AddressMaxLenght = 200;
+        }
+
+        public static class Intervention
+        {
+            public const int DescriptionDoctorMinLenght = 5;
+            public const int DescriptionDoctorMaxLenght = 500;
+
+            public const int DescriptionUserMinLenght = 5;
+            public const int DescriptionUserMaxLenght = 500;
         }
     }
 }
