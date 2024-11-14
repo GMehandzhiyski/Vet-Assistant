@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using static VetAssistant.Common.ValidationConstants.Gender;
 
 namespace VetAssistant.Data.Models
 {
@@ -11,6 +12,7 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("GenderName")]
+        [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
 
         [Comment("Collection of Genders")]

@@ -87,7 +87,12 @@
 
             public const int DetailsMinLenght = 10;
             public const int DetailsMaxLenght = 500;
+        }
 
+        public static class Gender
+        {
+            public const int NameMinLenght = 3;
+            public const int NameMaxLenght = 7;
         }
 
     }
