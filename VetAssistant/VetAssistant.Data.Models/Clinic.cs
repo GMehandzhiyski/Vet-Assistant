@@ -12,9 +12,6 @@ namespace VetAssistant.Data.Models
         [Key]
         [Comment("ClinicId")]
         public Guid Id { get; set; } = Guid.NewGuid();
-        /// <summary>
-        /// Parametyr tampening
-        /// </summary>
 
         [Required]
         [Comment("ClinicName")]

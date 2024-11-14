@@ -48,7 +48,15 @@
         {
             public const int DescriptionMinLenght = 5;
             public const int DescriptionMaxLenght = 500;
+        }
 
+        public static class Country
+        {
+            public const int NameMinLenght = 2;
+            public const int NameMaxLenght = 70;
+
+            public const int CodeMinLenght = 2;
+            public const int CodeMaxLenght = 5;
 
         }
 
