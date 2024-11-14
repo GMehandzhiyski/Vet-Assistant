@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static VetAssistant.Common.ValidationConstants.Doctor;
 
 namespace VetAssistant.Data.Models
 {
@@ -14,13 +15,13 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("DoctorFirstName")]
-        [MaxLength(20)]
+        [MaxLength(FirstNameMaxLenght)]
         public string FirstName { get; set; } = string.Empty;
 
         [Required]
-        [Comment("DoctorSecondName")]
-        [MaxLength(20)]
-        public string SecondName { get; set; } = string.Empty;
+        [Comment("DoctorLastName")]
+        [MaxLength(LastNameMaxLenght)]
+        public string LastName { get; set; } = string.Empty;
 
         [Required]
         [Comment("DoctorDateOfBirth")]
@@ -28,12 +29,12 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("DoctorEmailAddress")]
-        [MaxLength(2)]
+        [MaxLength(EmailMaxLenght)]
         public string Email { get; set; } = string.Empty;
 
         [Required]
         [Comment("PhoneNumber")]
-        [MaxLength(20)]
+        [MaxLength(PhoneNumberMaxLenght)]
         public string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
@@ -47,22 +48,22 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("DoctorTown")]
-        [MaxLength(40)]
+        [MaxLength(TownMaxLenght)]
         public string Town { get; set; } = string.Empty;
 
         [Required]
         [Comment("DoctorEducation")]
-        [MaxLength(200)]
+        [MaxLength(EducationMaxLenght)]
         public string Education { get; set; } = string.Empty;
 
         [Required]
         [Comment("DoctorSpecialty")]
-        [MaxLength(200)]
+        [MaxLength(SpecialtyMaxLenght)]
         public string Specialty { get; set; } = string.Empty;
 
         [Required]
         [Comment("DoctorExperience")]
-        [MaxLength(500)]
+        [MaxLength(ExperienceMaxLenght)]
         public string Experience { get; set; } = string.Empty;
 
         [Comment("DoctorDetails")]
@@ -80,7 +81,6 @@ namespace VetAssistant.Data.Models
 
         [Comment("CollectionOfDoctorPet")]
         public virtual ICollection<DoctorPet> DoctorsPets { get; set; } = new List<DoctorPet>();
-
 
         [Comment("CollectionOfDoctorIntervention")]
         public virtual ICollection<DoctorIntervention> DoctorsInterventions { get; set; } = new List<DoctorIntervention>();

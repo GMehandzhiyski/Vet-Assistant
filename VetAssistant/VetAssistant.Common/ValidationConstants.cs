@@ -57,6 +57,36 @@
 
             public const int CodeMinLenght = 2;
             public const int CodeMaxLenght = 5;
+        }
+
+        public static class Doctor
+        {
+            public const int FirstNameMinLenght = 2;
+            public const int FirstNameMaxLenght = 20;
+
+            public const int LastNameMinLenght = 2;
+            public const int LastNameMaxLenght = 20;
+
+            public const int EmailMinLenght = 5;
+            public const int EmailMaxLenght = 50;
+
+            public const int PhoneNumberMinLenght = 5;
+            public const int PhoneNumberMaxLenght = 50;
+
+            public const int TownMinLenght = 2;
+            public const int TownMaxLenght = 80;
+
+            public const int EducationMinLenght = 10;
+            public const int EducationMaxLenght = 500;
+
+            public const int SpecialtyMinLenght = 10;
+            public const int SpecialtyMaxLenght = 500;
+
+            public const int ExperienceMinLenght = 10;
+            public const int ExperienceMaxLenght = 500;
+
+            public const int DetailsMinLenght = 10;
+            public const int DetailsMaxLenght = 500;
 
         }
 
