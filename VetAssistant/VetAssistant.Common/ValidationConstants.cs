@@ -95,5 +95,10 @@
             public const int NameMaxLenght = 7;
         }
 
+        public static class TypeInspection
+        {
+            public const int NameMinLenght = 3;
+            public const int NameMaxLenght = 200;
+        }
     }
 }
