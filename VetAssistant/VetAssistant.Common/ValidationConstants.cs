@@ -44,7 +44,13 @@
             public const int WorkingTimeMaxLenght = 100;
         }
 
+        public static class Booking
+        {
+            public const int DescriptionMinLenght = 5;
+            public const int DescriptionMaxLenght = 500;
 
+
+        }
 
     }
 }

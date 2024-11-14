@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static VetAssistant.Common.ValidationConstants.Booking;
 
 namespace VetAssistant.Data.Models
 {
@@ -52,6 +53,7 @@ namespace VetAssistant.Data.Models
         public TypeInspection TypeInspection { get; set; } = null!;
 
         [Required]
+        [MaxLength(DescriptionMaxLenght)]
         [Comment("Description")]
         public string Description { get; set; } = string.Empty;
 
