@@ -69,7 +69,7 @@ namespace VetAssistant.Data.Models
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfUserPet")]
-        public virtual ICollection<UserPet> UsersPets { get; set; } = new List<UserPet>();
+        public virtual ICollection<UserDetailsPet> UsersPets { get; set; } = new List<UserDetailsPet>();
 
         [Comment("CollectionOfDoctorsPets")]
 
