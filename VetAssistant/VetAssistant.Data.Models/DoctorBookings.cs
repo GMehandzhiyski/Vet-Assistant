@@ -9,7 +9,6 @@ namespace VetAssistant.Data.Models
         [Comment("DoctorId")]
         public Guid DoctorId { get; set; }
 
-
         [Required]
         [Comment("Doctor")]
         public virtual Doctor Doctor { get; set; } = null!;

@@ -5,8 +5,6 @@ using static VetAssistant.Common.ValidationConstants.Doctor;
 
 namespace VetAssistant.Data.Models
 {
-    [PrimaryKey(nameof(Id), nameof(CountryId))]
-
     public class Doctor
     {
         [Key]
@@ -67,7 +65,7 @@ namespace VetAssistant.Data.Models
         public string Experience { get; set; } = string.Empty;
 
         [Comment("DoctorDetails")]
-        [MaxLength(500)]
+        [MaxLength(DetailsMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
         [Comment("DoctorImage")]
@@ -77,12 +75,12 @@ namespace VetAssistant.Data.Models
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfClinicDoctor")]
-        public virtual ICollection<ClinicDoctor> ClinicsDoctors { get; set; } = new List<ClinicDoctor>();
+        public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; } = new List<ClinicDoctor>();
 
         [Comment("CollectionOfDoctorPet")]
-        public virtual ICollection<DoctorPet> DoctorsPets { get; set; } = new List<DoctorPet>();
+        public virtual ICollection<DoctorPet> DoctorPets { get; set; } = new List<DoctorPet>();
 
         [Comment("CollectionOfDoctorIntervention")]
-        public virtual ICollection<DoctorIntervention> DoctorsInterventions { get; set; } = new List<DoctorIntervention>();
+        public virtual ICollection<DoctorIntervention> DoctorInterventions { get; set; } = new List<DoctorIntervention>();
     }
 }

@@ -6,6 +6,7 @@ namespace VetAssistant.Data.Models
 {
     public class Intervention
     {
+
         [Key]
         [Comment("InterventionId")]
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -48,7 +49,7 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("TypeOfInspection")]
         [ForeignKey(nameof(TypeInspectionId))]
-        public TypeInspection TypeInspection { get; set; } = null!;
+        public TypeIntervention TypeInspection { get; set; } = null!;
 
         [Required]
         [Comment("Description")]
@@ -57,6 +58,7 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("PriceForIntervention")]
+        [Precision(18, 4)]
         public decimal Price { get; set; }
 
         [Required]

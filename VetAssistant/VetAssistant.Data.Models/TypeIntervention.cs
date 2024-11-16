@@ -1,21 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
-using static VetAssistant.Common.ValidationConstants.TypeInspection;
+using static VetAssistant.Common.ValidationConstants.TypeIntervention;
 
 namespace VetAssistant.Data.Models
 {
-    public class TypeInspection
+    public class TypeIntervention
     {
         [Key]
         [Comment("TypeInspectionId")]
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
         [Comment("TypeInterventionName")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = null!;
-
-        [Comment("TYpeInspectionCollection")]
-        public virtual ICollection<TypeInspection> TypeInspections { get; set; } = null!;
     }
 }

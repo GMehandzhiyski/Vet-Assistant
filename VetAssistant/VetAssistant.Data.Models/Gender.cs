@@ -14,8 +14,5 @@ namespace VetAssistant.Data.Models
         [Comment("GenderName")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
-
-        [Comment("Collection of Genders")]
-        public ICollection<Gender> Genders { get; set; } = new List<Gender>();
     }
 }

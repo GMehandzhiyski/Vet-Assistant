@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using static VetAssistant.Common.ValidationConstants.Country;
 
 namespace VetAssistant.Data.Models
 {
@@ -10,14 +11,12 @@ namespace VetAssistant.Data.Models
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Comment("CountryName")]
-        [MaxLength(70)]
+        [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
 
         [Comment("CountryISOCode")]
-        [MaxLength(5)]
+        [MaxLength(CodeMaxLenght)]
         public string Code { get; set; } = string.Empty;
 
-        [Comment("Collection of Countries")]
-        public virtual ICollection<Country> Countries { get; set; } = new List<Country>();
     }
 }

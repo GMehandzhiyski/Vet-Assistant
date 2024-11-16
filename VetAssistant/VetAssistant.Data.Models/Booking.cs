@@ -5,7 +5,6 @@ using static VetAssistant.Common.ValidationConstants.Booking;
 
 namespace VetAssistant.Data.Models
 {
-    [PrimaryKey(nameof(Id), nameof(UserId), nameof(PetId), nameof(DoctorId), nameof(TypeInspectionId))]
     public class Booking
     {
         [Key]
@@ -50,7 +49,7 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("TypeOfInspection")]
         [ForeignKey(nameof(TypeInspectionId))]
-        public TypeInspection TypeInspection { get; set; } = null!;
+        public TypeIntervention TypeInspection { get; set; } = null!;
 
         [Required]
         [MaxLength(DescriptionMaxLenght)]

@@ -5,8 +5,6 @@ using static VetAssistant.Common.ValidationConstants.Clinic;
 
 namespace VetAssistant.Data.Models
 {
-    [PrimaryKey((nameof(Id)), nameof(CountryId))]
-
     public class Clinic
     {
         [Key]
@@ -56,7 +54,7 @@ namespace VetAssistant.Data.Models
         public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfClinicsDoctors")]
-        public virtual ICollection<ClinicDoctor> ClinicsDoctors { get; set; } = new List<ClinicDoctor>();
+        public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; } = new List<ClinicDoctor>();
 
 
     }
