@@ -82,5 +82,9 @@ namespace VetAssistant.Data.Models
 
         [Comment("CollectionOfDoctorIntervention")]
         public virtual ICollection<DoctorIntervention> DoctorInterventions { get; set; } = new List<DoctorIntervention>();
+
+        [Comment("CollectionOfDoctorBookings")]
+        public virtual ICollection<DoctorBookings> DoctorBookings { get; set; } = new List<DoctorBookings>();
+
     }
 }

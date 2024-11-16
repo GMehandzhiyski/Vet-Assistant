@@ -9,6 +9,18 @@ namespace VetAssistant.Data.Configuration
         {
             builder
                 .HasKey(db => new { db.DoctorId, db.BookingId });
+
+            builder
+                .HasOne(db => db.Doctor)
+                .WithMany(d => d.DoctorBookings)
+                .HasForeignKey(db => db.Doctor.Id)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder
+                .HasOne(db => db.Booking)
+                .WithMany(b => b.DoctorBookings)
+                .HasForeignKey(db => db.BookingId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
