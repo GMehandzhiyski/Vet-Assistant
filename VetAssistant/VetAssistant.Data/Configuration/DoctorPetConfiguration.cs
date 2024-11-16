@@ -10,6 +10,18 @@ namespace VetAssistant.Data.Configuration
         {
             builder
                 .HasKey(dp => new { dp.DoctorId, dp.PetId });
+
+            builder
+                .HasOne(d => d.Doctor)
+                .WithMany(dp => dp.DoctorPets)
+                .HasForeignKey(dp => dp.DoctorId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder
+                .HasOne(p => p.Pet)
+                .WithMany(dp => dp.DoctorPets)
+                .HasForeignKey(p => p.PetId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
