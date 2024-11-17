@@ -8,6 +8,8 @@
         IEnumerable<TType> GetAll();
         Task<IEnumerable<TType>> GetAllAsync();
 
+        IEnumerable<TType> GetAllAttached();
+
         TType GetById(TId id);
         Task<TType> GetByIdAsync(TId id);
 
