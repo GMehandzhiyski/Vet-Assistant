@@ -74,9 +74,6 @@ namespace VetAssistant.Data.Models
         [Comment("DoctorSoftDelete")]
         public bool IsDeleted { get; set; } = false;
 
-        [Comment("CollectionOfClinicDoctor")]
-        public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; } = new List<ClinicDoctor>();
-
         [Comment("CollectionOfDoctorPet")]
         public virtual ICollection<DoctorPet> DoctorPets { get; set; } = new List<DoctorPet>();
 

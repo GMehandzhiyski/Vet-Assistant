@@ -67,14 +67,11 @@ namespace VetAssistant.Data.Models
         [Comment("PetSoftDeleted")]
         public bool IsDeleted { get; set; } = false;
 
-        [Comment("CollectionOfUserPet")]
-        public virtual ICollection<UserDetailsPet> UserPets { get; set; } = new List<UserDetailsPet>();
-
-        [Comment("CollectionOfDoctorsPets")]
-
-        public virtual ICollection<DoctorPet> DoctorPets { get; set; } = new List<DoctorPet>();
-
         [Comment("CollectionOfPetIntervention")]
         public virtual ICollection<PetIntervention> PetInterventions { get; set; } = new List<PetIntervention>();
+
+        [Comment("CollectionOfPetIntervention")]
+        public virtual ICollection<PetBookings> PetBookings { get; set; } = new List<PetBookings>();
     }
 }
+

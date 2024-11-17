@@ -18,7 +18,7 @@ namespace VetAssistant.Data.Configuration
 
             builder
                 .HasOne(db => db.Booking)
-                .WithMany(b => b.DoctorBookings)
+                .WithMany()
                 .HasForeignKey(db => db.BookingId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

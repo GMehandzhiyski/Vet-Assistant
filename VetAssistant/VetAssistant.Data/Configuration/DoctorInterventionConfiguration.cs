@@ -18,7 +18,7 @@ namespace VetAssistant.Data.Configuration
 
             builder
                 .HasOne(i => i.Intervention)
-                .WithMany(di => di.DoctorInterventions)
+                .WithMany()
                 .HasForeignKey(i => i.InterventionId)
                 .OnDelete(DeleteBehavior.NoAction);
         }

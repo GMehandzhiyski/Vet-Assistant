@@ -56,6 +56,5 @@ namespace VetAssistant.Data.Models
         [Comment("CollectionOfClinicsDoctors")]
         public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; } = new List<ClinicDoctor>();
 
-
     }
 }

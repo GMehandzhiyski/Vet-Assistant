@@ -21,9 +21,6 @@ namespace VetAssistant.Data.Configuration
                 .OnDelete(DeleteBehavior.NoAction);
 
 
-            //to be.....
-            //builder
-            //    .HasData(GeneratePet());
         }
     }
 }

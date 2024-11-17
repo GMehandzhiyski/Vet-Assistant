@@ -13,7 +13,7 @@ namespace VetAssistant.Data.Configuration
 
             builder
                 .HasOne(b => b.UserDetails)
-                .WithMany()
+                .WithMany(us => us.UserBookings)
                 .HasForeignKey(ub => ub.UserDetailsId)
                 .OnDelete(DeleteBehavior.NoAction);
 

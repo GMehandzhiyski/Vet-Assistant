@@ -71,8 +71,5 @@ namespace VetAssistant.Data.Models
 
         [Comment("BookingInterventionSoftDeleted")]
         public bool IsDeleted { get; set; } = false;
-
-        [Comment("CollectionOfDoctorIntervention")]
-        public virtual ICollection<DoctorIntervention> DoctorInterventions { get; set; } = new List<DoctorIntervention>();
     }
 }

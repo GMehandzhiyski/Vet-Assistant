@@ -19,7 +19,7 @@ namespace VetAssistant.Data.Configuration
 
             builder
                 .HasOne(p => p.Pet)
-                .WithMany(dp => dp.DoctorPets)
+                .WithMany()
                 .HasForeignKey(p => p.PetId)
                 .OnDelete(DeleteBehavior.NoAction);
         }
