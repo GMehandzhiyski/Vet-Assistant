@@ -14,7 +14,7 @@
 
         }
 
-        public VetAssistantDbContext(DbContextOptions options)
+        public VetAssistantDbContext(DbContextOptions<VetAssistantDbContext> options)
             : base(options)
         {
 

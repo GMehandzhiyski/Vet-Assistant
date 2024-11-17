@@ -12,7 +12,8 @@ namespace VetAssistant.Web
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            var connectionString = builder.Configuration
+                .GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
             builder.Services.AddDbContext<VetAssistantDbContext>(options =>
                 options.UseSqlServer(connectionString));
@@ -24,7 +25,7 @@ namespace VetAssistant.Web
             //        options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<VetAssistantDbContext>();
 
-            //Change Default Identity User with new Application User
+            // Change Default Identity User with new Application User
             //builder.Services
             //  .AddDefaultIdentity<ApplicationUser>(options =>
             //      options.SignIn.RequireConfirmedAccount = true)
