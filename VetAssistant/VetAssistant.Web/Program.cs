@@ -34,11 +34,15 @@ namespace VetAssistant.Web
             //Identity Service
             builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
             {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
             })
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<VetAssistantDbContext>();
 
-            //builder.Services.AddScoped<IRepository<>, Repository<>>();
+            //builder.Services.AddScoped<IRepository, Repository>();
 
             builder.Services.AddControllersWithViews();
 
