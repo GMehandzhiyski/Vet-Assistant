@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{541B4906-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Data", "VetAssistant.Data\VetAssistant.Data.csproj", "{6B725A01-ADAF-44B6-83A8-8D201CC16193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Web.Infrastructure", "VetAssistant.Web.Infrastructure\VetAssistant.Web.Infrastructure.csproj", "{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Web.Infrastructure", "VetAssistant.Web.Infrastructure\VetAssistant.Web.Infrastructure.csproj", "{03533EAC-8E52-4036-A9FA-E8DA8938FA7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E2FC3A81-8E74-4B36-9418-0D3DC2C11564}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

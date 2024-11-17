@@ -37,6 +37,8 @@ namespace VetAssistant.Web
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<VetAssistantDbContext>();
 
+            //builder.Services.AddScoped<IRepository<>, Repository<>>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
