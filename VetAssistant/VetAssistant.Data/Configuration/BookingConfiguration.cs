@@ -8,11 +8,11 @@ namespace VetAssistant.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Booking> builder)
         {
-            builder
-                 .HasOne(b => b.UserDetails)
-                 .WithMany()
-                 .HasForeignKey(b => b.UserDetails)
-                 .OnDelete(DeleteBehavior.NoAction);
+            //builder
+            //     .HasOne(b => b.UserDetails)
+            //     .WithMany()
+            //     .HasForeignKey(b => b.UserDetails)
+            //     .OnDelete(DeleteBehavior.NoAction);
 
             builder
                 .HasOne(b => b.Pet)

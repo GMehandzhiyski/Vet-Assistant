@@ -12,8 +12,8 @@ using VetAssistant.Data;
 namespace VetAssistant.Data.Migrations
 {
     [DbContext(typeof(VetAssistantDbContext))]
-    [Migration("20241116073436_init")]
-    partial class init
+    [Migration("20241117061327_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -377,1165 +377,1165 @@ namespace VetAssistant.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("56fa0021-2705-4d0f-9a42-e023bc17f1dc"),
+                            Id = new Guid("f0cb0f47-71f3-44fb-8c90-c94decbe3a20"),
                             Code = "AF",
                             Name = "Afghanistan"
                         },
                         new
                         {
-                            Id = new Guid("f2588ea3-a2a1-4150-8a19-72e9f1fdf257"),
+                            Id = new Guid("e1bbde39-9ed3-45f3-81d0-864cd6f64a22"),
                             Code = "AL",
                             Name = "Albania"
                         },
                         new
                         {
-                            Id = new Guid("15f0b79b-7351-458b-8018-248f840d6b20"),
+                            Id = new Guid("84e6f1d8-dc43-4879-8570-de4c016be04a"),
                             Code = "DZ",
                             Name = "Algeria"
                         },
                         new
                         {
-                            Id = new Guid("c646aafc-92b7-4c87-8a82-2b2cc4802d4d"),
+                            Id = new Guid("fb430e86-40bf-44a3-93ff-a544d96b2bd0"),
                             Code = "AD",
                             Name = "Andorra"
                         },
                         new
                         {
-                            Id = new Guid("993bc1c5-5b5e-4fc1-8feb-62e10639ff55"),
+                            Id = new Guid("28e45857-9421-4156-94f1-1ef1d658488c"),
                             Code = "AO",
                             Name = "Angola"
                         },
                         new
                         {
-                            Id = new Guid("08e0537c-ccc2-4e36-9321-6f078604d6a3"),
+                            Id = new Guid("a4cdc4f2-3e7a-49cd-9ba6-c3a784fc648f"),
                             Code = "AG",
                             Name = "Antigua and Barbuda"
                         },
                         new
                         {
-                            Id = new Guid("d54e44bf-36d8-41b2-a840-e11e86866a0c"),
+                            Id = new Guid("1bbf61c8-f4b0-4d76-a503-1638a22f7ed0"),
                             Code = "AR",
                             Name = "Argentina"
                         },
                         new
                         {
-                            Id = new Guid("3d30826c-9f76-4413-8f41-f5e7535e0788"),
+                            Id = new Guid("119c5258-7183-4136-8852-94787ce132c9"),
                             Code = "AM",
                             Name = "Armenia"
                         },
                         new
                         {
-                            Id = new Guid("4d33bc44-339c-4d43-a1ce-ed4758ee9952"),
+                            Id = new Guid("8f0e1dd1-6dc9-4c00-8ad4-3b5e5bebc695"),
                             Code = "AU",
                             Name = "Australia"
                         },
                         new
                         {
-                            Id = new Guid("3533679b-0701-4458-bbae-bb406c83f750"),
+                            Id = new Guid("50f550a8-68de-4355-9920-fadc3e2f1b2d"),
                             Code = "AT",
                             Name = "Austria"
                         },
                         new
                         {
-                            Id = new Guid("09443c03-1667-43d2-8ace-7ccd963bd5ae"),
+                            Id = new Guid("a367122a-b431-4155-bca9-2e193630544d"),
                             Code = "AZ",
                             Name = "Azerbaijan"
                         },
                         new
                         {
-                            Id = new Guid("6289d8a0-3124-4b7e-bcca-6ec8b5862077"),
+                            Id = new Guid("51771d54-865d-436f-bdfb-b4815012e9cd"),
                             Code = "BS",
                             Name = "Bahamas"
                         },
                         new
                         {
-                            Id = new Guid("35f7577f-33e3-4599-a03d-bb590a2e4bd4"),
+                            Id = new Guid("58275c70-1c07-4804-b8d3-7caacf7e79c4"),
                             Code = "BH",
                             Name = "Bahrain"
                         },
                         new
                         {
-                            Id = new Guid("195c9e25-11ba-47a4-8715-2b2dd1d9057d"),
+                            Id = new Guid("2fb2a4da-2869-4843-8b9c-6332b082acdd"),
                             Code = "BD",
                             Name = "Bangladesh"
                         },
                         new
                         {
-                            Id = new Guid("1174a7f1-3c74-4c66-a688-095507beefe4"),
+                            Id = new Guid("eb221aab-b113-45f1-abed-4bfbd46b60b8"),
                             Code = "BB",
                             Name = "Barbados"
                         },
                         new
                         {
-                            Id = new Guid("cbdc3d74-3c53-47a0-b23e-0bffd0f6f136"),
+                            Id = new Guid("10fdb21a-1cd4-434d-97a1-cc0e0d27a91f"),
                             Code = "BY",
                             Name = "Belarus"
                         },
                         new
                         {
-                            Id = new Guid("e4240aa2-69d2-4c8a-86c2-a280fd34073a"),
+                            Id = new Guid("4cdcbfb1-e048-4571-a1c0-0e6065dbbf95"),
                             Code = "BE",
                             Name = "Belgium"
                         },
                         new
                         {
-                            Id = new Guid("af6c4409-05ed-4151-8c52-875ec9ee536a"),
+                            Id = new Guid("cba90152-bbb2-4457-8556-6491246c14e7"),
                             Code = "BZ",
                             Name = "Belize"
                         },
                         new
                         {
-                            Id = new Guid("595242fa-81fb-4bb2-a19c-11c1e519c569"),
+                            Id = new Guid("132612f9-9565-497e-8dbc-ac76ffdeb40e"),
                             Code = "BJ",
                             Name = "Benin"
                         },
                         new
                         {
-                            Id = new Guid("8a2c647f-f216-4937-b75b-6d1355653da0"),
+                            Id = new Guid("1e22b379-a0c3-4b0e-9402-7bf4b13630ff"),
                             Code = "BT",
                             Name = "Bhutan"
                         },
                         new
                         {
-                            Id = new Guid("88198bb5-c784-4287-9a04-22f55d04c972"),
+                            Id = new Guid("ee07a86f-7494-4c6f-885f-43253d9ee007"),
                             Code = "BO",
                             Name = "Bolivia"
                         },
                         new
                         {
-                            Id = new Guid("4e5e1e62-cf1a-4501-b632-fdbf69f79237"),
+                            Id = new Guid("5be00c29-3f00-4fac-b861-c68b56a4e6fc"),
                             Code = "BA",
                             Name = "Bosnia and Herzegovina"
                         },
                         new
                         {
-                            Id = new Guid("88be5c0c-951d-4b3a-8d30-1c9e3d2da037"),
+                            Id = new Guid("39f7910c-37e9-4f5d-acd3-359536809113"),
                             Code = "BW",
                             Name = "Botswana"
                         },
                         new
                         {
-                            Id = new Guid("e28aac77-6178-4084-9b53-95c66a7b3a31"),
+                            Id = new Guid("c847efec-7cc9-4ca6-ad20-801d9574218c"),
                             Code = "BR",
                             Name = "Brazil"
                         },
                         new
                         {
-                            Id = new Guid("02657e8f-69ba-4297-8232-dd719597f651"),
+                            Id = new Guid("ef564c8f-dae6-426c-a7c9-1e7f929060e2"),
                             Code = "BN",
                             Name = "Brunei"
                         },
                         new
                         {
-                            Id = new Guid("138f5c4e-fbd5-4dde-8ff3-0a54883a0f25"),
+                            Id = new Guid("7533c6e0-fe48-45c2-bac0-996d14308bf6"),
                             Code = "BG",
                             Name = "Bulgaria"
                         },
                         new
                         {
-                            Id = new Guid("62dbd864-1bbc-46de-8165-39dd0e80d8b9"),
+                            Id = new Guid("50eeaf44-3e9c-4652-b0a6-b3e84b1b213e"),
                             Code = "BF",
                             Name = "Burkina Faso"
                         },
                         new
                         {
-                            Id = new Guid("481dfe3a-42f1-4137-9e61-f2b4b52e910c"),
+                            Id = new Guid("6c255709-7e2f-4f3f-b69f-5dea1f3e7aa2"),
                             Code = "BI",
                             Name = "Burundi"
                         },
                         new
                         {
-                            Id = new Guid("d1003ea4-cd8e-4803-9b72-5bd73b12d0da"),
+                            Id = new Guid("4d72db03-c3a9-4a05-9da5-5f5afc52a63b"),
                             Code = "CV",
                             Name = "Cabo Verde"
                         },
                         new
                         {
-                            Id = new Guid("ce97869e-9028-499a-be98-da7cf21fe595"),
+                            Id = new Guid("af6656b4-04da-4210-a836-346abb0f05c2"),
                             Code = "KH",
                             Name = "Cambodia"
                         },
                         new
                         {
-                            Id = new Guid("474017da-9b99-45cd-aa30-a45b0c402391"),
+                            Id = new Guid("146532d5-7040-480a-b60c-e9de5e80876b"),
                             Code = "CM",
                             Name = "Cameroon"
                         },
                         new
                         {
-                            Id = new Guid("859b5b1a-72f0-415c-a320-fb29ffc0d359"),
+                            Id = new Guid("82cf3171-cbda-4077-91a4-4847bf4b8d44"),
                             Code = "CA",
                             Name = "Canada"
                         },
                         new
                         {
-                            Id = new Guid("a1cd49bd-8f3a-4a11-8295-75565ddde180"),
+                            Id = new Guid("59bcbb14-c5ee-4b6b-9fa0-63ae6fd9d438"),
                             Code = "CF",
                             Name = "Central African Republic"
                         },
                         new
                         {
-                            Id = new Guid("79bff4d1-b663-4ac6-b4ac-bfe0a61072df"),
+                            Id = new Guid("3c7afba9-91a3-4cd2-a623-b12f79229a92"),
                             Code = "TD",
                             Name = "Chad"
                         },
                         new
                         {
-                            Id = new Guid("cd6cd2c3-0493-45a7-9a96-74ba21762f4c"),
+                            Id = new Guid("d759fd9f-3e8a-42b1-942d-8447f285c25d"),
                             Code = "CL",
                             Name = "Chile"
                         },
                         new
                         {
-                            Id = new Guid("47356710-4eaf-4c44-adbf-de9b29d32d74"),
+                            Id = new Guid("05291f28-f94a-43e7-a8ee-cbdccb4612ec"),
                             Code = "CN",
                             Name = "China"
                         },
                         new
                         {
-                            Id = new Guid("09bec1cd-a208-4008-81a6-5ebede87dd70"),
+                            Id = new Guid("647d9843-9add-4d20-8888-756e8ff518d4"),
                             Code = "CO",
                             Name = "Colombia"
                         },
                         new
                         {
-                            Id = new Guid("a270f2e7-e19f-4834-bf8e-01a3df8ad7ff"),
+                            Id = new Guid("30fc9582-4387-4aae-9e88-d48b014fcf61"),
                             Code = "KM",
                             Name = "Comoros"
                         },
                         new
                         {
-                            Id = new Guid("fbf6252c-9c16-47ce-a481-e9f9f2995052"),
+                            Id = new Guid("d4d76580-abb6-4a3f-be6d-eea3b3c74d0f"),
                             Code = "CG",
                             Name = "Congo (Congo-Brazzaville)"
                         },
                         new
                         {
-                            Id = new Guid("6b58ff3a-3fcd-4df5-a59a-e0c65def2a15"),
+                            Id = new Guid("0f81fc8c-0fcb-4ddd-801a-32086e8179f2"),
                             Code = "CR",
                             Name = "Costa Rica"
                         },
                         new
                         {
-                            Id = new Guid("b084608e-df46-4f0d-a9db-53a8e683ba4b"),
+                            Id = new Guid("6726ec48-cfe2-4fd3-a4d2-edd958060943"),
                             Code = "HR",
                             Name = "Croatia"
                         },
                         new
                         {
-                            Id = new Guid("ca2ad41f-65a5-46d8-9264-d50223e9ca52"),
+                            Id = new Guid("c1c99e44-5db0-42c8-89bd-ba7e599c71bd"),
                             Code = "CU",
                             Name = "Cuba"
                         },
                         new
                         {
-                            Id = new Guid("6da882f3-942e-4cc3-b8bb-683b60d34c05"),
+                            Id = new Guid("5d43df3d-b57d-4224-b36d-6be80b13e772"),
                             Code = "CY",
                             Name = "Cyprus"
                         },
                         new
                         {
-                            Id = new Guid("803b140c-01d1-4fbb-8aab-90203392bdee"),
+                            Id = new Guid("25032991-7088-4990-a171-15b660155d6b"),
                             Code = "CZ",
                             Name = "Czechia (Czech Republic)"
                         },
                         new
                         {
-                            Id = new Guid("a356a2e6-6946-430d-9455-082d3b69854d"),
+                            Id = new Guid("62313145-330a-44dc-b8a0-0b1f85a4ff4f"),
                             Code = "DK",
                             Name = "Denmark"
                         },
                         new
                         {
-                            Id = new Guid("fe431ce5-ff9b-4346-b37a-f21387a4730a"),
+                            Id = new Guid("08e632ea-fa25-4ddc-abfd-83d78d914c52"),
                             Code = "DJ",
                             Name = "Djibouti"
                         },
                         new
                         {
-                            Id = new Guid("4a778691-816e-443b-ae5c-84a7c5e747d9"),
+                            Id = new Guid("cec3d8d0-5ac8-4512-b7fd-d39f2c7ec41b"),
                             Code = "DM",
                             Name = "Dominica"
                         },
                         new
                         {
-                            Id = new Guid("698519ce-9675-490a-8172-5c08844a03f4"),
+                            Id = new Guid("3e57f7b6-239f-499b-b440-7ec4f115d4b0"),
                             Code = "DO",
                             Name = "Dominican Republic"
                         },
                         new
                         {
-                            Id = new Guid("4a752a83-07dc-4fc7-b33a-11c6c3e9011a"),
+                            Id = new Guid("15630223-4eb5-4d2b-affa-8db775d7d7bf"),
                             Code = "EC",
                             Name = "Ecuador"
                         },
                         new
                         {
-                            Id = new Guid("ad87c332-e7cb-4bc1-8356-21d5a68e98b4"),
+                            Id = new Guid("614fd4a4-70df-4c28-b44d-5f5085aa5c83"),
                             Code = "EG",
                             Name = "Egypt"
                         },
                         new
                         {
-                            Id = new Guid("1ced3173-937e-4a2b-8a21-24e3e6246608"),
+                            Id = new Guid("c466e06b-491e-4a08-84e4-4308991668d3"),
                             Code = "SV",
                             Name = "El Salvador"
                         },
                         new
                         {
-                            Id = new Guid("dd7069ef-5c40-4096-9e74-faae8c169c45"),
+                            Id = new Guid("9f8b4935-1412-4ba5-93f3-959c65caf031"),
                             Code = "GQ",
                             Name = "Equatorial Guinea"
                         },
                         new
                         {
-                            Id = new Guid("3c63a9f6-bfb3-4873-baac-f548716b5a39"),
+                            Id = new Guid("78752889-5b28-4ac0-a59b-575fe0eac1c3"),
                             Code = "ER",
                             Name = "Eritrea"
                         },
                         new
                         {
-                            Id = new Guid("2b4a3835-0961-4249-ae12-1180d323af14"),
+                            Id = new Guid("3a881136-b0bb-4f71-89e7-81c45dc69b97"),
                             Code = "EE",
                             Name = "Estonia"
                         },
                         new
                         {
-                            Id = new Guid("8b6611b6-2411-4d64-bd1d-bdf9adc56f96"),
+                            Id = new Guid("bb3e2052-aa2a-4b77-af24-0dc579ec27f8"),
                             Code = "SZ",
                             Name = "Eswatini"
                         },
                         new
                         {
-                            Id = new Guid("7130107a-2f1b-4150-91ca-d37e6573fc0d"),
+                            Id = new Guid("7ee586db-a771-41a3-a755-1faaca7ef4b3"),
                             Code = "ET",
                             Name = "Ethiopia"
                         },
                         new
                         {
-                            Id = new Guid("b23a87bc-24f6-49c9-8a9a-12a64bc371ca"),
+                            Id = new Guid("60577866-c9f0-4f77-a83b-c9a8888d63fd"),
                             Code = "FJ",
                             Name = "Fiji"
                         },
                         new
                         {
-                            Id = new Guid("72217836-88e6-45f0-9d29-aca4b18669e8"),
+                            Id = new Guid("b6e6bd19-39cb-42ab-8692-eb082730c753"),
                             Code = "FI",
                             Name = "Finland"
                         },
                         new
                         {
-                            Id = new Guid("2eb2fb7d-882f-47f6-b2b3-3c889af48db5"),
+                            Id = new Guid("11d85c0a-505d-4431-91ca-365d31192c3d"),
                             Code = "FR",
                             Name = "France"
                         },
                         new
                         {
-                            Id = new Guid("1bf7ea6a-fccb-4341-b8ce-ee107981e426"),
+                            Id = new Guid("8fb79544-1e1e-48a1-88e1-57a4a6530ce3"),
                             Code = "GA",
                             Name = "Gabon"
                         },
                         new
                         {
-                            Id = new Guid("109a80af-df4a-4971-a9ce-36179f3141da"),
+                            Id = new Guid("642728c8-0606-4ba4-a806-466c42ecf9d8"),
                             Code = "GM",
                             Name = "Gambia"
                         },
                         new
                         {
-                            Id = new Guid("df8add1e-5f61-4b11-9cd6-d2eff51d5226"),
+                            Id = new Guid("d57bb1fb-68d7-41ec-89a8-0f8184a6de78"),
                             Code = "GE",
                             Name = "Georgia"
                         },
                         new
                         {
-                            Id = new Guid("545ab6c5-0930-4099-8f1f-bf5e52fa0274"),
+                            Id = new Guid("2316b3f8-44e9-43e5-b6bb-d12b1d2cf5cc"),
                             Code = "DE",
                             Name = "Germany"
                         },
                         new
                         {
-                            Id = new Guid("3c932ed6-6c6c-4fe1-8fb4-c5decb18e148"),
+                            Id = new Guid("a7fb82fd-8f82-42d4-850a-1ca5274500af"),
                             Code = "GH",
                             Name = "Ghana"
                         },
                         new
                         {
-                            Id = new Guid("d542f409-898c-4d4e-b85c-505429cae765"),
+                            Id = new Guid("40d13bd8-9fe5-455c-a270-d711345efab2"),
                             Code = "GR",
                             Name = "Greece"
                         },
                         new
                         {
-                            Id = new Guid("b60b78f8-8fd5-43df-b49a-c6310919057d"),
+                            Id = new Guid("5ce75b9e-515b-4062-86d4-8931d5765e38"),
                             Code = "GD",
                             Name = "Grenada"
                         },
                         new
                         {
-                            Id = new Guid("1c3979f7-f48d-45e2-9594-ffc259ead5f8"),
+                            Id = new Guid("e166486d-ac92-482d-8cf9-c68e83de26e3"),
                             Code = "GT",
                             Name = "Guatemala"
                         },
                         new
                         {
-                            Id = new Guid("ca1dbe9a-647b-4839-9e4b-87482924ccc0"),
+                            Id = new Guid("8e83bbfd-9950-4fbd-bd86-63c59f1c1b81"),
                             Code = "GN",
                             Name = "Guinea"
                         },
                         new
                         {
-                            Id = new Guid("3634b41f-75c5-411e-af59-64a3bff4264d"),
+                            Id = new Guid("41b94640-a568-4ee1-8a47-729f308a964a"),
                             Code = "GW",
                             Name = "Guinea-Bissau"
                         },
                         new
                         {
-                            Id = new Guid("97b89d32-bcdc-4d27-9cbc-2ff7bd98d5cb"),
+                            Id = new Guid("32e173a6-08cc-4f7e-afb4-1f16334d95cc"),
                             Code = "GY",
                             Name = "Guyana"
                         },
                         new
                         {
-                            Id = new Guid("49d74ef7-1452-4e5e-a8d5-6a45b0c3b37a"),
+                            Id = new Guid("6e12b56d-4f85-4f1c-9713-6593b7100686"),
                             Code = "HT",
                             Name = "Haiti"
                         },
                         new
                         {
-                            Id = new Guid("741023dc-8f1b-41f8-b042-df41369ebbd4"),
+                            Id = new Guid("f21288ed-9c3a-463b-baaf-5fe214508798"),
                             Code = "VA",
                             Name = "Holy See"
                         },
                         new
                         {
-                            Id = new Guid("e99e6c9e-1fd8-4e26-ac96-045b610abd56"),
+                            Id = new Guid("e9862297-0998-4c66-ad0e-4b3abf316b8d"),
                             Code = "HN",
                             Name = "Honduras"
                         },
                         new
                         {
-                            Id = new Guid("3dba0def-99f8-42a6-8e40-fa007feca127"),
+                            Id = new Guid("9c38eb99-d4c8-4398-8619-434a046cc736"),
                             Code = "HU",
                             Name = "Hungary"
                         },
                         new
                         {
-                            Id = new Guid("37563ff2-0e3a-4648-971e-1614b4d6df1f"),
+                            Id = new Guid("df9cec09-955c-440f-95ac-8c076d733b75"),
                             Code = "IS",
                             Name = "Iceland"
                         },
                         new
                         {
-                            Id = new Guid("1529e974-589d-43d7-91f3-21a842cd49bc"),
+                            Id = new Guid("b9523c39-cd32-4379-8367-530bbcb07172"),
                             Code = "IN",
                             Name = "India"
                         },
                         new
                         {
-                            Id = new Guid("4221a12d-4c7d-4545-ae25-b836c8f0b0bc"),
+                            Id = new Guid("48df0827-19f1-4009-9c2f-edab7fe5fa07"),
                             Code = "ID",
                             Name = "Indonesia"
                         },
                         new
                         {
-                            Id = new Guid("75433732-362f-4b3e-bb2a-d8bdadceb961"),
+                            Id = new Guid("65ab4f61-57be-43fc-a71e-73fcc175fb1a"),
                             Code = "IR",
                             Name = "Iran"
                         },
                         new
                         {
-                            Id = new Guid("f5e3c239-b365-4008-b9fc-3e2fdecb947c"),
+                            Id = new Guid("9e553e29-6298-4377-8932-dfc5d7c8cd2a"),
                             Code = "IQ",
                             Name = "Iraq"
                         },
                         new
                         {
-                            Id = new Guid("629a5ca5-cb4d-44e6-b04b-875d69b865d4"),
+                            Id = new Guid("cb213f3a-6b32-4afa-8cc8-c3b0d5974ba9"),
                             Code = "IE",
                             Name = "Ireland"
                         },
                         new
                         {
-                            Id = new Guid("a6793ce0-0c37-48f1-ae93-fb8e57eaf4d5"),
+                            Id = new Guid("5ff0f3fd-a689-4c2d-844c-f2b5abb7a8e6"),
                             Code = "IL",
                             Name = "Israel"
                         },
                         new
                         {
-                            Id = new Guid("3765d8e4-8267-4621-9aec-c249b54aa646"),
+                            Id = new Guid("7815b654-b074-46ab-9e3f-efb94403e361"),
                             Code = "IT",
                             Name = "Italy"
                         },
                         new
                         {
-                            Id = new Guid("69db1776-b799-47de-a75f-aed055ad892a"),
+                            Id = new Guid("24decf1a-6412-41da-969a-551845a915c0"),
                             Code = "JM",
                             Name = "Jamaica"
                         },
                         new
                         {
-                            Id = new Guid("148bd731-2c0d-4d59-a3e7-71cb6300b944"),
+                            Id = new Guid("b6dca6d0-8e3f-41eb-b3ae-4ef07c7ea0c6"),
                             Code = "JP",
                             Name = "Japan"
                         },
                         new
                         {
-                            Id = new Guid("3d38ce12-ba82-44c1-9389-e2a29455c8bb"),
+                            Id = new Guid("13fdcc96-4d53-40e4-93e7-a49b1eecddba"),
                             Code = "JO",
                             Name = "Jordan"
                         },
                         new
                         {
-                            Id = new Guid("db7d67a1-2b35-41b7-95aa-6f7f8ac1f13c"),
+                            Id = new Guid("98429dc9-46a1-444e-a810-6a075a89de9a"),
                             Code = "KZ",
                             Name = "Kazakhstan"
                         },
                         new
                         {
-                            Id = new Guid("eabdf0f2-0f7a-44fa-bc3b-7b71e7c8be0f"),
+                            Id = new Guid("1813979c-f909-4af4-aac4-2b1d788566dc"),
                             Code = "KE",
                             Name = "Kenya"
                         },
                         new
                         {
-                            Id = new Guid("82c49a83-3e1e-4ebf-9445-2a8496321b87"),
+                            Id = new Guid("b1eea1ce-a799-4015-a3dd-a318d894d555"),
                             Code = "KI",
                             Name = "Kiribati"
                         },
                         new
                         {
-                            Id = new Guid("8880278e-b051-49f2-8c78-bd73ea610e2d"),
+                            Id = new Guid("7f44fb24-a47b-444e-942d-d5078a51c40f"),
                             Code = "KW",
                             Name = "Kuwait"
                         },
                         new
                         {
-                            Id = new Guid("0a686465-af16-4ea4-9420-df710fe2302d"),
+                            Id = new Guid("176efd02-42fe-48d0-b234-90c45c2922b6"),
                             Code = "KG",
                             Name = "Kyrgyzstan"
                         },
                         new
                         {
-                            Id = new Guid("0b13a496-93b2-408d-b97c-db0ca5dc9f40"),
+                            Id = new Guid("451a9b01-7c36-46d3-a02c-47eadafbc13c"),
                             Code = "LA",
                             Name = "Laos"
                         },
                         new
                         {
-                            Id = new Guid("d5ca7c77-1232-4f01-ada4-a30feabab9bb"),
+                            Id = new Guid("85872c43-85f1-4bb5-a3c3-5fec09149fe0"),
                             Code = "LV",
                             Name = "Latvia"
                         },
                         new
                         {
-                            Id = new Guid("41398e89-d1a5-4a7c-b715-b7f257fa37ba"),
+                            Id = new Guid("58edc076-3fa5-4c30-aa1f-0429411c2c27"),
                             Code = "LB",
                             Name = "Lebanon"
                         },
                         new
                         {
-                            Id = new Guid("f0e3d6db-05bb-41ca-b31b-d7d1eede6e34"),
+                            Id = new Guid("0c85448e-0fa9-47ac-9d6f-4b8a8f4e7127"),
                             Code = "LS",
                             Name = "Lesotho"
                         },
                         new
                         {
-                            Id = new Guid("dc95c988-3281-4af6-8c3f-9b81a6c9ed57"),
+                            Id = new Guid("31afe637-3abe-4a3b-b1a9-dbfe8c39f8ff"),
                             Code = "LR",
                             Name = "Liberia"
                         },
                         new
                         {
-                            Id = new Guid("6400d6e4-c582-4b84-b4d5-55eb25666144"),
+                            Id = new Guid("b451730d-5a8a-43f4-86fa-cadfe9992994"),
                             Code = "LY",
                             Name = "Libya"
                         },
                         new
                         {
-                            Id = new Guid("69d3138a-1141-4e60-ab1a-6192f1ed4240"),
+                            Id = new Guid("1c16edf0-c587-4e62-8d0e-6fdaf52eeebe"),
                             Code = "LI",
                             Name = "Liechtenstein"
                         },
                         new
                         {
-                            Id = new Guid("2cd0fa17-f971-4568-b7fb-42e41920d494"),
+                            Id = new Guid("da1e00fc-ebcf-4507-8923-e354230fa761"),
                             Code = "LT",
                             Name = "Lithuania"
                         },
                         new
                         {
-                            Id = new Guid("a033aa47-fbf5-45da-9367-ea06ef348c62"),
+                            Id = new Guid("68bfaf34-467f-4321-82c0-09c21d9f90b7"),
                             Code = "LU",
                             Name = "Luxembourg"
                         },
                         new
                         {
-                            Id = new Guid("e16574fc-036d-44a0-a9cd-24e8535e6f27"),
+                            Id = new Guid("201ac6c1-1827-49fe-b3e1-ec0df7c1aeda"),
                             Code = "MG",
                             Name = "Madagascar"
                         },
                         new
                         {
-                            Id = new Guid("02451861-d3f0-4911-b24e-835fc3e6982e"),
+                            Id = new Guid("d3827c2a-e8f9-4463-b852-d8af8a806404"),
                             Code = "MW",
                             Name = "Malawi"
                         },
                         new
                         {
-                            Id = new Guid("430666fe-5763-4b9f-bdab-78d71348b37a"),
+                            Id = new Guid("09d28c8f-d25f-4dee-9f70-8d38e3e6b0fc"),
                             Code = "MY",
                             Name = "Malaysia"
                         },
                         new
                         {
-                            Id = new Guid("174c9ef4-e7ab-4d08-b0d8-c55ffe9e47a3"),
+                            Id = new Guid("8ecc3741-9cdc-4edf-b1bd-8b206e8b4831"),
                             Code = "MV",
                             Name = "Maldives"
                         },
                         new
                         {
-                            Id = new Guid("16605065-7181-4cfe-983e-b51f2c02487d"),
+                            Id = new Guid("f9071618-703a-40b9-abac-2d5172507966"),
                             Code = "ML",
                             Name = "Mali"
                         },
                         new
                         {
-                            Id = new Guid("14741fee-eefc-4faa-8ed0-d84b43fa7ceb"),
+                            Id = new Guid("edea5920-4dbf-45a3-a74f-7bac8a58cba6"),
                             Code = "MT",
                             Name = "Malta"
                         },
                         new
                         {
-                            Id = new Guid("6d2c10cf-db7a-45d2-bf72-88762ea205b9"),
+                            Id = new Guid("7ed95e03-2c7e-4439-b084-e21d59885292"),
                             Code = "MH",
                             Name = "Marshall Islands"
                         },
                         new
                         {
-                            Id = new Guid("f695f193-b12f-49df-991c-6bd2a99ff9f7"),
+                            Id = new Guid("e15d6cd5-b7ed-474a-a389-a8d19554973d"),
                             Code = "MR",
                             Name = "Mauritania"
                         },
                         new
                         {
-                            Id = new Guid("ee106a15-79bf-4e55-bb1b-8797880b6a4a"),
+                            Id = new Guid("ec274e23-55d3-4c32-92ad-b59b8f89ca2e"),
                             Code = "MU",
                             Name = "Mauritius"
                         },
                         new
                         {
-                            Id = new Guid("b0b1a7f1-9a11-489b-84a3-7d215ffde813"),
+                            Id = new Guid("903a3477-942d-498d-8ad7-f2f9424d2f93"),
                             Code = "MX",
                             Name = "Mexico"
                         },
                         new
                         {
-                            Id = new Guid("fefb7c79-6b2f-4596-a551-d4737bc6d2f2"),
+                            Id = new Guid("8db9d55c-5061-4ee3-a727-2944ad70baed"),
                             Code = "FM",
                             Name = "Micronesia"
                         },
                         new
                         {
-                            Id = new Guid("3ef879a9-1ff0-474d-b9f1-df8a2f385d8c"),
+                            Id = new Guid("59bf3b03-2e4f-4b52-b787-f74a52af62c5"),
                             Code = "MD",
                             Name = "Moldova"
                         },
                         new
                         {
-                            Id = new Guid("164865ed-98fb-44f6-b1d6-003ad08ed1a2"),
+                            Id = new Guid("e11a5c45-e4f7-4366-9aa2-9c30a7f196f4"),
                             Code = "MC",
                             Name = "Monaco"
                         },
                         new
                         {
-                            Id = new Guid("b4805d94-50b2-466e-8455-d234d498b0c2"),
+                            Id = new Guid("900174b1-1f0c-45de-be15-ac5e44e60acd"),
                             Code = "MN",
                             Name = "Mongolia"
                         },
                         new
                         {
-                            Id = new Guid("b4f01db7-676b-4ce1-a06a-0bd67a8ad6de"),
+                            Id = new Guid("ff6c9841-5c86-4c87-a63a-61ff48c163ed"),
                             Code = "ME",
                             Name = "Montenegro"
                         },
                         new
                         {
-                            Id = new Guid("a8d132f4-49b7-4392-a36b-93be299a5240"),
+                            Id = new Guid("6d329cc1-7d5d-4a65-8924-599c7f87429e"),
                             Code = "MA",
                             Name = "Morocco"
                         },
                         new
                         {
-                            Id = new Guid("3ba7ca05-4e93-49e4-a6b5-1d954e144650"),
+                            Id = new Guid("4f24a16d-6872-4257-b1da-28c14d447e4e"),
                             Code = "MZ",
                             Name = "Mozambique"
                         },
                         new
                         {
-                            Id = new Guid("1a3d210c-3e54-4905-85f9-8566132c493c"),
+                            Id = new Guid("0fec4761-42bb-4fd4-904e-d27bcfce58ae"),
                             Code = "MM",
                             Name = "Myanmar"
                         },
                         new
                         {
-                            Id = new Guid("7191c31e-14c8-41f2-9454-7cfd48691dca"),
+                            Id = new Guid("4a9a6ab6-d0a2-4296-8957-6a37f305b236"),
                             Code = "NA",
                             Name = "Namibia"
                         },
                         new
                         {
-                            Id = new Guid("953249fc-17ae-4eb7-80f7-98a9b56dfab5"),
+                            Id = new Guid("4a1a0f09-de39-4cde-92b0-db0668826f7d"),
                             Code = "NR",
                             Name = "Nauru"
                         },
                         new
                         {
-                            Id = new Guid("30fe27c5-a2e0-4439-9d4f-54063f7d29e1"),
+                            Id = new Guid("bce54b8f-e552-4d08-94c0-257c33c35bf0"),
                             Code = "NP",
                             Name = "Nepal"
                         },
                         new
                         {
-                            Id = new Guid("6ae8ed11-5dea-4af5-978d-547133cb704d"),
+                            Id = new Guid("136afb49-77bd-4956-a41e-91ee90240297"),
                             Code = "NL",
                             Name = "Netherlands"
                         },
                         new
                         {
-                            Id = new Guid("56b1e71d-a6a9-4250-9768-09a218f7441b"),
+                            Id = new Guid("347f1b47-298c-48ea-a87a-f48022b94d5d"),
                             Code = "NZ",
                             Name = "New Zealand"
                         },
                         new
                         {
-                            Id = new Guid("b4610657-f449-4bf7-9c8a-284221c2af41"),
+                            Id = new Guid("3c2da900-62e8-40ef-9231-af31198b607b"),
                             Code = "NI",
                             Name = "Nicaragua"
                         },
                         new
                         {
-                            Id = new Guid("16a8bb9f-a780-454a-80ee-fc09e3f1e337"),
+                            Id = new Guid("e1174b5f-3e91-4f0c-a14e-e4cd0b251e6c"),
                             Code = "NE",
                             Name = "Niger"
                         },
                         new
                         {
-                            Id = new Guid("da938431-1bbb-4358-a880-6792a297902d"),
+                            Id = new Guid("14e1b457-6061-47a6-88fb-5e3b243cfc3d"),
                             Code = "NG",
                             Name = "Nigeria"
                         },
                         new
                         {
-                            Id = new Guid("8f1d0024-9d78-452a-b741-21add21cde86"),
+                            Id = new Guid("58a6c442-69ef-43d8-ae40-f9859be0f062"),
                             Code = "KP",
                             Name = "North Korea"
                         },
                         new
                         {
-                            Id = new Guid("d881e8ad-e603-4fbb-ac69-638ac6770345"),
+                            Id = new Guid("790a2d97-ebe9-4c22-b053-a920ca15fb75"),
                             Code = "MK",
                             Name = "North Macedonia"
                         },
                         new
                         {
-                            Id = new Guid("6bb7a5e2-6708-4d55-ac62-f5b614fc3000"),
+                            Id = new Guid("1495a151-bdcf-4ed5-9c36-a21466c5921f"),
                             Code = "NO",
                             Name = "Norway"
                         },
                         new
                         {
-                            Id = new Guid("637faf45-0512-408a-ba2f-ac832750f87b"),
+                            Id = new Guid("c968c7aa-a1bd-408a-b99c-dd27e5606392"),
                             Code = "OM",
                             Name = "Oman"
                         },
                         new
                         {
-                            Id = new Guid("5f03d52d-0372-4c5d-a3c3-2e06df6a8a07"),
+                            Id = new Guid("ef9fcc24-7845-4e0c-9de5-26e5e36eff56"),
                             Code = "PK",
                             Name = "Pakistan"
                         },
                         new
                         {
-                            Id = new Guid("92f3b7e5-d874-49b7-922d-6b6e00b683b0"),
+                            Id = new Guid("206c55b9-95fe-4866-a757-5ad2796682c4"),
                             Code = "PW",
                             Name = "Palau"
                         },
                         new
                         {
-                            Id = new Guid("3290885f-b68e-4436-96cb-9b3cccdf4e53"),
+                            Id = new Guid("5e2dabe3-c775-475f-a647-9e0a19713bd5"),
                             Code = "PS",
                             Name = "Palestine"
                         },
                         new
                         {
-                            Id = new Guid("cb7f88d0-570b-4bcf-aa72-b7452c010b60"),
+                            Id = new Guid("e6e5e5c2-0c81-475d-ac6d-8e5118acfd08"),
                             Code = "PA",
                             Name = "Panama"
                         },
                         new
                         {
-                            Id = new Guid("222814eb-b5a1-4226-beb4-52d61baf931e"),
+                            Id = new Guid("7661611c-5c4c-4f3e-8153-56e0334ed55b"),
                             Code = "PG",
                             Name = "Papua New Guinea"
                         },
                         new
                         {
-                            Id = new Guid("de7f363f-123f-4a08-9b97-e7216bbe4358"),
+                            Id = new Guid("d13beaa4-41ce-4ac6-9a69-e44786f0113a"),
                             Code = "PY",
                             Name = "Paraguay"
                         },
                         new
                         {
-                            Id = new Guid("deebdfce-ea25-4d5a-a50f-d188dfcb05c4"),
+                            Id = new Guid("4060e374-1097-4d67-baf0-57b594195d5e"),
                             Code = "PE",
                             Name = "Peru"
                         },
                         new
                         {
-                            Id = new Guid("e1361f53-1791-434c-85ca-2c1fea1ef282"),
+                            Id = new Guid("ee4d562b-1f53-4002-b96f-7b70c238e279"),
                             Code = "PH",
                             Name = "Philippines"
                         },
                         new
                         {
-                            Id = new Guid("34df2be5-a0f0-4281-a7f3-38488d20c870"),
+                            Id = new Guid("073b314e-7ae3-437f-9487-e21dd6ff2f5a"),
                             Code = "PL",
                             Name = "Poland"
                         },
                         new
                         {
-                            Id = new Guid("3ec191ce-4f89-45f0-b0e9-3095d66bb32f"),
+                            Id = new Guid("78e065ee-9501-42d6-b4d1-ad2a12aaa341"),
                             Code = "PT",
                             Name = "Portugal"
                         },
                         new
                         {
-                            Id = new Guid("8f6ea078-d5f0-4a8d-b0f3-3ddabfe59b9e"),
+                            Id = new Guid("359838fa-5981-4dc0-ae97-9fbd25cd89bd"),
                             Code = "QA",
                             Name = "Qatar"
                         },
                         new
                         {
-                            Id = new Guid("8857d6e9-a70e-488c-a471-3eed0ad6968e"),
+                            Id = new Guid("75aee484-2190-4370-8d48-cc70df8a737a"),
                             Code = "RO",
                             Name = "Romania"
                         },
                         new
                         {
-                            Id = new Guid("bb8be9b3-db6a-4fb5-a712-6b5d1de762f1"),
+                            Id = new Guid("7bb012a6-5f3b-4c84-ab86-db6e9dc063cf"),
                             Code = "RU",
                             Name = "Russia"
                         },
                         new
                         {
-                            Id = new Guid("bc665db1-9164-46f7-b453-b89779fb3f26"),
+                            Id = new Guid("eee4d292-f906-4208-a42a-f62f59ebf4d5"),
                             Code = "RW",
                             Name = "Rwanda"
                         },
                         new
                         {
-                            Id = new Guid("35cad6a5-0e66-4a14-8b21-c584bd64612b"),
+                            Id = new Guid("79d988cc-fe31-4255-ac16-1f00aded37f9"),
                             Code = "KN",
                             Name = "Saint Kitts and Nevis"
                         },
                         new
                         {
-                            Id = new Guid("d0356873-685f-456f-aba4-0ce59ce89a5e"),
+                            Id = new Guid("1b3da3e2-f4a8-4fb9-94bc-4614979f1e27"),
                             Code = "LC",
                             Name = "Saint Lucia"
                         },
                         new
                         {
-                            Id = new Guid("dd7ff212-d859-4d87-93e3-e0088f0a0c7e"),
+                            Id = new Guid("760b8024-1b4b-4d2d-a32f-374486e5009f"),
                             Code = "VC",
                             Name = "Saint Vincent and the Grenadines"
                         },
                         new
                         {
-                            Id = new Guid("114a7b1c-efce-4053-aade-82ed8d5f60be"),
+                            Id = new Guid("6602c48a-0ae0-449c-8f8b-173101b80965"),
                             Code = "WS",
                             Name = "Samoa"
                         },
                         new
                         {
-                            Id = new Guid("496779aa-8fcf-4192-9bdd-4bc95d34b7db"),
+                            Id = new Guid("0a5eda74-2560-4b77-a4d0-cf6c7c5ad1ed"),
                             Code = "SM",
                             Name = "San Marino"
                         },
                         new
                         {
-                            Id = new Guid("0925b76b-c1cc-438d-8f8f-d6841ae1d3f0"),
+                            Id = new Guid("79076b71-b4f9-410c-860f-1f9132f3c81e"),
                             Code = "ST",
                             Name = "Sao Tome and Principe"
                         },
                         new
                         {
-                            Id = new Guid("6e3b65f0-ec50-4c5c-8f4a-841a3e1229d1"),
+                            Id = new Guid("b055064b-c728-4abb-8ef3-b0d7728969e4"),
                             Code = "SA",
                             Name = "Saudi Arabia"
                         },
                         new
                         {
-                            Id = new Guid("8eaa1fa5-adaf-43c6-8453-185610fb3a15"),
+                            Id = new Guid("a7c47761-8ee6-45c7-9370-4f5dccd18343"),
                             Code = "SN",
                             Name = "Senegal"
                         },
                         new
                         {
-                            Id = new Guid("3bbe9151-baa1-4b69-855c-783ecd5525ea"),
+                            Id = new Guid("d1cf637b-f93b-4489-b347-fa4f83b512ab"),
                             Code = "RS",
                             Name = "Serbia"
                         },
                         new
                         {
-                            Id = new Guid("fde81b3b-9d08-41f6-8515-4859c551b7bc"),
+                            Id = new Guid("5db13f45-4e44-4357-953f-04319b3f8bd9"),
                             Code = "SC",
                             Name = "Seychelles"
                         },
                         new
                         {
-                            Id = new Guid("11c41f2e-3afb-4565-b500-10538253455c"),
+                            Id = new Guid("9b111ed7-d066-4e73-8f94-48724983db82"),
                             Code = "SL",
                             Name = "Sierra Leone"
                         },
                         new
                         {
-                            Id = new Guid("8b5887b7-f003-4c39-aad8-83165f3ea13e"),
+                            Id = new Guid("a6ddec4c-6d6b-44bf-b921-16a24864be83"),
                             Code = "SG",
                             Name = "Singapore"
                         },
                         new
                         {
-                            Id = new Guid("a125f5af-3b89-4c36-a389-557eff868631"),
+                            Id = new Guid("4fe54c00-8f2f-4588-8bf8-09a08afce1f0"),
                             Code = "SK",
                             Name = "Slovakia"
                         },
                         new
                         {
-                            Id = new Guid("599c2dde-dc51-4160-956e-21539a2ad6b8"),
+                            Id = new Guid("938cec65-f319-4b61-8f84-c0bc47637c16"),
                             Code = "SI",
                             Name = "Slovenia"
                         },
                         new
                         {
-                            Id = new Guid("a38124bf-5431-4cd3-b6df-f94afc9c47b6"),
+                            Id = new Guid("077d9dc1-3253-46dd-92f7-ba21e6641bc8"),
                             Code = "SB",
                             Name = "Solomon Islands"
                         },
                         new
                         {
-                            Id = new Guid("30d39c1f-f1d7-45b6-bd56-61826c0a27f3"),
+                            Id = new Guid("1ce6105a-58fa-4257-929a-7b0877c4474d"),
                             Code = "SO",
                             Name = "Somalia"
                         },
                         new
                         {
-                            Id = new Guid("f4813003-d79d-4049-8b34-162c307a2152"),
+                            Id = new Guid("2a4aa46a-3fd2-4a5e-bf2d-976e534b3e2d"),
                             Code = "ZA",
                             Name = "South Africa"
                         },
                         new
                         {
-                            Id = new Guid("0ebfeeb6-0721-4047-a16a-f113e02f0cf1"),
+                            Id = new Guid("6efbbcfd-6d5e-401c-a157-febe82fe349e"),
                             Code = "KR",
                             Name = "South Korea"
                         },
                         new
                         {
-                            Id = new Guid("849efc01-113c-4f8a-bc52-719d3c9362f5"),
+                            Id = new Guid("aab630ce-8a65-410b-9f0f-5ec42107ae38"),
                             Code = "SS",
                             Name = "South Sudan"
                         },
                         new
                         {
-                            Id = new Guid("f36adaac-ee8c-4659-a75a-2b60bcb5a65f"),
+                            Id = new Guid("02836724-cb7c-4693-a6bf-ebf7e95ae492"),
                             Code = "ES",
                             Name = "Spain"
                         },
                         new
                         {
-                            Id = new Guid("22e879c5-23fe-4ee3-bbff-af2e2e025a7a"),
+                            Id = new Guid("df365ef0-3a00-46d9-a478-cada5a77d126"),
                             Code = "LK",
                             Name = "Sri Lanka"
                         },
                         new
                         {
-                            Id = new Guid("3dce028c-ee8d-48e4-9421-eb516b42296d"),
+                            Id = new Guid("2829332c-3876-4765-92b3-cb2964f876e1"),
                             Code = "SD",
                             Name = "Sudan"
                         },
                         new
                         {
-                            Id = new Guid("6ad317d9-acaf-4609-9d92-42c9c672b186"),
+                            Id = new Guid("60412d76-a846-40f8-aa2f-0ed2cbbd720b"),
                             Code = "SR",
                             Name = "Suriname"
                         },
                         new
                         {
-                            Id = new Guid("9eee9a50-e009-4882-9be8-bcb524f2df0c"),
+                            Id = new Guid("e165f06f-24ba-4663-b09a-107b66433e25"),
                             Code = "SE",
                             Name = "Sweden"
                         },
                         new
                         {
-                            Id = new Guid("18540598-4956-4dab-b2b3-69581333f3c0"),
+                            Id = new Guid("fae189ba-03ce-4072-bbad-b2f4fc896aed"),
                             Code = "CH",
                             Name = "Switzerland"
                         },
                         new
                         {
-                            Id = new Guid("62a7a4e3-0f1e-4af6-ad17-34d519b0b0f0"),
+                            Id = new Guid("60b903c9-a4b5-4e2e-937a-1ee7b1c80268"),
                             Code = "SY",
                             Name = "Syria"
                         },
                         new
                         {
-                            Id = new Guid("b740fddb-bb89-4498-8de9-9c986082f2f0"),
+                            Id = new Guid("1f01d674-acf8-4cd0-b1f9-917ceb44dccb"),
                             Code = "TJ",
                             Name = "Tajikistan"
                         },
                         new
                         {
-                            Id = new Guid("5479f3fc-4df9-4e22-88f9-89b298860959"),
+                            Id = new Guid("3ad6c3c8-8183-40c2-b5cf-3a71a804843a"),
                             Code = "TZ",
                             Name = "Tanzania"
                         },
                         new
                         {
-                            Id = new Guid("537c1db8-b38d-49d9-874f-96aeb57d6c50"),
+                            Id = new Guid("60ed4d77-30c4-4bb4-b3b3-242919e013ee"),
                             Code = "TH",
                             Name = "Thailand"
                         },
                         new
                         {
-                            Id = new Guid("b18bca68-95f3-4944-874d-d4b37284208a"),
+                            Id = new Guid("84c33aac-41ee-4524-a084-595c70aea921"),
                             Code = "TL",
                             Name = "Timor-Leste"
                         },
                         new
                         {
-                            Id = new Guid("9a756351-8e09-4391-953e-3576d46cb8c8"),
+                            Id = new Guid("b4a30250-672f-4270-88c5-a3ac06026049"),
                             Code = "TG",
                             Name = "Togo"
                         },
                         new
                         {
-                            Id = new Guid("5887fd86-3d86-4ea9-ac79-602692c9d251"),
+                            Id = new Guid("5ab74f46-e801-4a86-99b3-672e2389829d"),
                             Code = "TO",
                             Name = "Tonga"
                         },
                         new
                         {
-                            Id = new Guid("7da0fda9-9efe-452d-8758-e9032f3fb07a"),
+                            Id = new Guid("696defad-f44f-429a-9e01-8fd8dc4e6227"),
                             Code = "TT",
                             Name = "Trinidad and Tobago"
                         },
                         new
                         {
-                            Id = new Guid("f560dff2-471a-4e78-8c1e-7635200f0d2f"),
+                            Id = new Guid("932f6641-0d78-4ffe-97b7-2aa02320b95e"),
                             Code = "TN",
                             Name = "Tunisia"
                         },
                         new
                         {
-                            Id = new Guid("6ee91291-2bf9-46f9-8a48-0952493ce2ee"),
+                            Id = new Guid("ad7f38b1-f083-47f2-974f-9a723c5a6886"),
                             Code = "TR",
                             Name = "Turkey"
                         },
                         new
                         {
-                            Id = new Guid("a5f115b6-2e47-4bf1-89f4-e2b337445ff7"),
+                            Id = new Guid("163293ee-c020-4617-b01e-3b7a23e79aa5"),
                             Code = "TM",
                             Name = "Turkmenistan"
                         },
                         new
                         {
-                            Id = new Guid("e52a4fb9-9493-4f86-a5a3-cbd87207aefb"),
+                            Id = new Guid("8899043a-879a-43d9-b918-cb01a6bfb847"),
                             Code = "TV",
                             Name = "Tuvalu"
                         },
                         new
                         {
-                            Id = new Guid("11297a24-8d79-47ef-b07f-900a220f4b3c"),
+                            Id = new Guid("aaf689e1-f84a-4072-86a9-e4419f92800f"),
                             Code = "UG",
                             Name = "Uganda"
                         },
                         new
                         {
-                            Id = new Guid("9e1d632d-ff36-4935-8e03-cecaafbc6a50"),
+                            Id = new Guid("b99fd527-7a56-406d-988f-dd6410fd8512"),
                             Code = "UA",
                             Name = "Ukraine"
                         },
                         new
                         {
-                            Id = new Guid("2764b0c3-2817-4afe-8540-2f3b9bc89698"),
+                            Id = new Guid("b8d006d8-85f9-4cdf-bf9f-4906a17d2575"),
                             Code = "AE",
                             Name = "United Arab Emirates"
                         },
                         new
                         {
-                            Id = new Guid("192c73f9-35ca-4cf4-8661-c58dad8a0b93"),
+                            Id = new Guid("baafb8a1-439a-4f6d-910d-71e3b6a3ae71"),
                             Code = "GB",
                             Name = "United Kingdom"
                         },
                         new
                         {
-                            Id = new Guid("39f792e5-1f06-4042-9605-9cd6025e67bd"),
+                            Id = new Guid("0051f113-a1a5-48af-b8af-f8db23555a74"),
                             Code = "US",
                             Name = "United States of America"
                         },
                         new
                         {
-                            Id = new Guid("2a3a652c-cbb8-4dca-93de-7cadccdb1d7f"),
+                            Id = new Guid("a947676a-9195-4db2-b9e3-ed7ffd35bf46"),
                             Code = "UY",
                             Name = "Uruguay"
                         },
                         new
                         {
-                            Id = new Guid("3b72bf62-b857-4628-8d2e-af4630963b43"),
+                            Id = new Guid("cdc9f6e7-3a75-4376-8dbb-deb61aa82bb9"),
                             Code = "UZ",
                             Name = "Uzbekistan"
                         },
                         new
                         {
-                            Id = new Guid("5fb0b710-65c8-4015-b285-7c8844471c8c"),
+                            Id = new Guid("c0d11139-7158-4200-a70a-dc8cd1a40340"),
                             Code = "VU",
                             Name = "Vanuatu"
                         },
                         new
                         {
-                            Id = new Guid("24e614b0-d9ab-44dc-805d-5dfbe8bc5c66"),
+                            Id = new Guid("f5986a0d-43a5-4578-b850-40aade4701a1"),
                             Code = "VA",
                             Name = "Vatican City"
                         },
                         new
                         {
-                            Id = new Guid("9bae68a8-3ddb-44d4-aa13-f6e98139d251"),
+                            Id = new Guid("0c09b2be-0ac1-4ff1-98ba-fdb76741dbd1"),
                             Code = "VE",
                             Name = "Venezuela"
                         },
                         new
                         {
-                            Id = new Guid("32ae764d-3d18-4e1d-a043-5c1e26fc5e6f"),
+                            Id = new Guid("8dfdd401-e1c7-4289-8825-a8d00a1b1114"),
                             Code = "VN",
                             Name = "Vietnam"
                         },
                         new
                         {
-                            Id = new Guid("17557e8f-abb5-4252-9303-17aea8d7f9f9"),
+                            Id = new Guid("48d26e13-98dc-4deb-882b-f613bfe41f4b"),
                             Code = "YE",
                             Name = "Yemen"
                         },
                         new
                         {
-                            Id = new Guid("74a89a0f-44ff-467b-a1c6-c9019b1fa3e4"),
+                            Id = new Guid("ea6f8da4-e12e-42dd-883d-25e679b8ee74"),
                             Code = "ZM",
                             Name = "Zambia"
                         },
                         new
                         {
-                            Id = new Guid("1cf1c4eb-72e7-4464-bc68-6cd006a7f8ed"),
+                            Id = new Guid("fd91ee6a-1f15-4897-ba99-fdbe4d71079b"),
                             Code = "ZW",
                             Name = "Zimbabwe"
                         });
@@ -1697,12 +1697,12 @@ namespace VetAssistant.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9e0d5a9d-f309-42c0-b28c-7e0894872a76"),
+                            Id = new Guid("53df8532-0f02-4044-9a82-72a788f77ac0"),
                             Name = "Male"
                         },
                         new
                         {
-                            Id = new Guid("69d8ac97-5f41-45f1-9a4b-5bc8c295f5f5"),
+                            Id = new Guid("4ecf606f-a512-44a9-a29d-5a92cfc6584d"),
                             Name = "Female"
                         });
                 });
@@ -1901,52 +1901,52 @@ namespace VetAssistant.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("434223c4-92f3-4814-9332-b8ed02cc0333"),
+                            Id = new Guid("bb31a26a-2cdf-4866-b10a-dd97fabe06c3"),
                             Name = "Emergency"
                         },
                         new
                         {
-                            Id = new Guid("236031c5-8e8d-4c1a-8325-29935d5e5343"),
+                            Id = new Guid("3c0fe220-c4bd-470e-909b-e487090b9872"),
                             Name = "Diagnostic Interventions"
                         },
                         new
                         {
-                            Id = new Guid("834fce2c-c900-40ba-9401-a65d8a0e8477"),
+                            Id = new Guid("b83dd9df-8bcc-4be9-a1b7-7fe97a9ee93e"),
                             Name = "Surgical Interventions"
                         },
                         new
                         {
-                            Id = new Guid("0328baa7-e6b7-44fa-b860-8d1c6e04fa28"),
+                            Id = new Guid("8e534223-6105-41c1-8a08-11aec3218178"),
                             Name = "Therapeutic Interventions"
                         },
                         new
                         {
-                            Id = new Guid("54223189-1619-4fe4-97a6-5bd9f6150b42"),
+                            Id = new Guid("af379a78-da2b-4703-a03f-d2082f433eb7"),
                             Name = "Dental Interventions"
                         },
                         new
                         {
-                            Id = new Guid("eed0abdb-4769-4c23-bf3b-8a4c3915a990"),
+                            Id = new Guid("40c908fa-9356-4e66-9adf-e798e9677903"),
                             Name = "Obstetric and Reproductive Interventions"
                         },
                         new
                         {
-                            Id = new Guid("2e63b0da-2414-457d-9776-6c742c24edef"),
+                            Id = new Guid("ca2c8d0e-414e-4083-8f67-a1cab6dc3afa"),
                             Name = "Exotic and Specialized Interventions"
                         },
                         new
                         {
-                            Id = new Guid("0bb78d20-b2ea-4f1e-bbee-6d16c59868f1"),
+                            Id = new Guid("f7d187ef-ae55-4914-80a4-41ae9f7abac0"),
                             Name = "Preventive Interventions"
                         },
                         new
                         {
-                            Id = new Guid("4a40036d-f0e8-4660-8ac1-e78a57243587"),
+                            Id = new Guid("9cd917e8-1a74-4a8d-9521-45aabfaf400a"),
                             Name = "Oncological Interventions"
                         },
                         new
                         {
-                            Id = new Guid("fec5534e-5769-4172-a9da-c52e016587e1"),
+                            Id = new Guid("7180472c-91d2-417b-be77-c3cd984a3c78"),
                             Name = "Postoperative Care"
                         });
                 });
@@ -2120,19 +2120,19 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Doctor", "Doctor")
                         .WithMany()
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Pet", "Pet")
                         .WithMany()
                         .HasForeignKey("PetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.TypeIntervention", "TypeInspection")
                         .WithMany()
                         .HasForeignKey("TypeInspectionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.UserDetails", "UserDetails")
@@ -2166,11 +2166,11 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Clinic", "Clinic")
                         .WithMany("ClinicDoctors")
                         .HasForeignKey("ClinicId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Doctor", "Doctor")
-                        .WithMany("ClinicDoctors")
+                        .WithMany()
                         .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -2200,9 +2200,9 @@ namespace VetAssistant.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Doctor", "Doctor")
-                        .WithMany()
+                        .WithMany("DoctorBookings")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Booking");
@@ -2215,13 +2215,13 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Doctor", "Doctor")
                         .WithMany("DoctorInterventions")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Intervention", "Intervention")
                         .WithMany()
                         .HasForeignKey("InterventionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Doctor");
@@ -2234,13 +2234,13 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Doctor", "Doctor")
                         .WithMany("DoctorPets")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Pet", "Pet")
-                        .WithMany("DoctorPets")
+                        .WithMany()
                         .HasForeignKey("PetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Doctor");
@@ -2307,13 +2307,13 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Booking", "Booking")
                         .WithMany()
                         .HasForeignKey("BookingId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Pet", "Pet")
-                        .WithMany()
+                        .WithMany("PetBookings")
                         .HasForeignKey("PetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Booking");
@@ -2326,13 +2326,13 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Intervention", "Intervention")
                         .WithMany()
                         .HasForeignKey("InterventionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.Pet", "Pet")
                         .WithMany("PetInterventions")
                         .HasForeignKey("PetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Intervention");
@@ -2349,9 +2349,9 @@ namespace VetAssistant.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.UserDetails", "UserDetails")
-                        .WithMany()
+                        .WithMany("UserBookings")
                         .HasForeignKey("UserDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Booking");
@@ -2364,7 +2364,7 @@ namespace VetAssistant.Data.Migrations
                     b.HasOne("VetAssistant.Data.Models.Country", "Country")
                         .WithMany()
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Country");
@@ -2392,15 +2392,15 @@ namespace VetAssistant.Data.Migrations
             modelBuilder.Entity("VetAssistant.Data.Models.UserDetailsPet", b =>
                 {
                     b.HasOne("VetAssistant.Data.Models.Pet", "Pet")
-                        .WithMany("UserPets")
+                        .WithMany()
                         .HasForeignKey("PetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("VetAssistant.Data.Models.UserDetails", "UserDetails")
-                        .WithMany()
+                        .WithMany("UserDetailsPets")
                         .HasForeignKey("UserDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Pet");
@@ -2415,7 +2415,7 @@ namespace VetAssistant.Data.Migrations
 
             modelBuilder.Entity("VetAssistant.Data.Models.Doctor", b =>
                 {
-                    b.Navigation("ClinicDoctors");
+                    b.Navigation("DoctorBookings");
 
                     b.Navigation("DoctorInterventions");
 
@@ -2424,11 +2424,16 @@ namespace VetAssistant.Data.Migrations
 
             modelBuilder.Entity("VetAssistant.Data.Models.Pet", b =>
                 {
-                    b.Navigation("DoctorPets");
+                    b.Navigation("PetBookings");
 
                     b.Navigation("PetInterventions");
+                });
 
-                    b.Navigation("UserPets");
+            modelBuilder.Entity("VetAssistant.Data.Models.UserDetails", b =>
+                {
+                    b.Navigation("UserBookings");
+
+                    b.Navigation("UserDetailsPets");
                 });
 #pragma warning restore 612, 618
         }
