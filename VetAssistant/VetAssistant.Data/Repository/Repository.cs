@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VetAssistant.Data.Repository.Contracts;
 using VetAssistant.Data.Repository.Interfaces;
+using VetAssistant.Web.Infrastructure.Extensions;
 
 namespace VetAssistant.Data.Repository
 {

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using VetAssistant.Data;
 using VetAssistant.Data.Models;
+using VetAssistant.Data.Repository.Interfaces;
 
 namespace VetAssistant.Web
 {
@@ -42,8 +43,8 @@ namespace VetAssistant.Web
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<VetAssistantDbContext>();
 
-            //builder.Services.AddScoped<IRepository, Repository>();
 
+            builder.Services.AddScoped<IRepository<Booking, Guid>, IRepository<Booking, Guid>>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
