@@ -5,7 +5,7 @@ using VetAssistant.Service.Data.Contracts;
 
 namespace VetAssistant.Service.Data
 {
-    public class BookingService : IBaseService, IBookingService
+    public class BookingService : BaseService, IBookingService
     {
         private readonly IRepository<Booking, Guid> bookingRepository;
 
@@ -14,9 +14,6 @@ namespace VetAssistant.Service.Data
             bookingRepository = _bookingRepository;
         }
 
-        public bool IsGuidValid(string? id, ref Guid parseGuid)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
