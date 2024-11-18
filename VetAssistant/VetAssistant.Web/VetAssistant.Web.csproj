@@ -28,8 +28,4 @@
     <ProjectReference Include="..\VetAssistant.Web.ViewModels\VetAssistant.Web.ViewModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Migrations\" />
-  </ItemGroup>
-
 </Project>
