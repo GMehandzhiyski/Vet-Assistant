@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Web.Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E2FC3A81-8E74-4B36-9418-0D3DC2C11564}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Service.Data", "VetAssistant.Service.Data\VetAssistant.Service.Data.csproj", "{305F06F5-8FC3-4279-ABDC-B8CDA1F00DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Service.Data", "VetAssistant.Service.Data\VetAssistant.Service.Data.csproj", "{305F06F5-8FC3-4279-ABDC-B8CDA1F00DE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetAssistant.Service.Mapping", "VetAssistant.Service.Mapping\VetAssistant.Service.Mapping.csproj", "{A16902E5-CF9A-4960-B65B-72EB3FB6A3BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetAssistant.Service.Mapping", "VetAssistant.Service.Mapping\VetAssistant.Service.Mapping.csproj", "{A16902E5-CF9A-4960-B65B-72EB3FB6A3BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

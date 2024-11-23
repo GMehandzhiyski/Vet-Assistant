@@ -59,6 +59,8 @@ namespace VetAssistant.Data.Models
 
         [Comment("BookingInterventionSoftDeleted")]
         public bool IsDeleted { get; set; } = false;
+
+        [Comment("DeletionTime")]
         public DateTime? DeletedOn { get; set; }
     }
 }

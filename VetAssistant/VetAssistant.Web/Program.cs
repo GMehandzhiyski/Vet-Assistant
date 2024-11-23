@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using VetAssistant.Data;
-using VetAssistant.Data.Models;
-using VetAssistant.Data.Repository.Interfaces;
-
 namespace VetAssistant.Web
 {
     public class Program
@@ -13,13 +7,21 @@ namespace VetAssistant.Web
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var connectionString = builder.Configuration
-                .GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            builder.Services.AddApplicationDatabase(builder.Configuration);
 
-            builder.Services.AddDbContext<VetAssistantDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            // Add services to the container.
+            // I Add this to extension method
+            //var connectionString = builder.Configuration
+            //    .GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            //builder.Services.AddDbContext<VetAssistantDbContext>(options =>
+            //    options.UseSqlServer(connectionString));
+
+            //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+
+            ///old to be deleted soon
+            ////////////////////////////////////////////////////////////////////////////////
 
             //builder.Services
             //    .AddDefaultIdentity<IdentityUser>(options =>
@@ -32,19 +34,32 @@ namespace VetAssistant.Web
             //      options.SignIn.RequireConfirmedAccount = true)
             //  .AddEntityFrameworkStores<VetAssistantDbContext>();
 
-            //Identity Service
-            builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
-            {
-                options.SignIn.RequireConfirmedAccount = false;
-                options.Password.RequireDigit = false;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = false;
-            })
-                .AddRoles<IdentityRole<Guid>>()
-                .AddEntityFrameworkStores<VetAssistantDbContext>();
+            //Identity Service -with this is work 23.11.24, I replace this with Custom Identity Behavior
+            //builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+            //{
+            //    options.SignIn.RequireConfirmedAccount = false;
+            //    options.Password.RequireDigit = false;
+            //    options.Password.RequireNonAlphanumeric = false;
+            //    options.Password.RequireUppercase = false;
+            //})
+            //    .AddRoles<IdentityRole<Guid>>()
+            //    .AddEntityFrameworkStores<VetAssistantDbContext>();
+            ////////////////////////////////////////////////////////////////////////////////////
+
+            //Add custom Identity Behavior
+            builder.Services.AddApplicationIdentity(builder.Configuration);
+            // I Add this to extension method
+            //builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+            //   .AddEntityFrameworkStores<VetAssistantDbContext>()
+            //   .AddDefaultTokenProviders();
 
 
-            builder.Services.AddScoped<IRepository<Booking, Guid>, IRepository<Booking, Guid>>();
+            //Add All Repository
+            builder.Services.AddApplicationServices(builder.Configuration);
+            // I Add this to extension method
+            //builder.Services.AddScoped<IRepository<Booking, Guid>, IRepository<Booking, Guid>>();
+
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
