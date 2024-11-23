@@ -27,7 +27,8 @@ namespace Microsoft.Extensions.DependencyInjection
 
         public static IServiceCollection AddApplicationIdentity(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDefaultIdentity<ApplicationUser>(options =>
+            //with this is work good
+            services.AddDefaultIdentity<UserDetails>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequireDigit = false;
@@ -36,8 +37,16 @@ namespace Microsoft.Extensions.DependencyInjection
             })
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<VetAssistantDbContext>();
+
             //still not work
-            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            // is need Migration and Update Date base
+            //services.AddIdentity<UserDetails, IdentityRole>(options =>
+            //{
+            //    options.SignIn.RequireConfirmedAccount = false;
+            //    options.Password.RequireDigit = false;
+            //    options.Password.RequireNonAlphanumeric = false;
+            //    options.Password.RequireUppercase = false;
+            //})
             //   .AddEntityFrameworkStores<VetAssistantDbContext>()
             //   .AddDefaultTokenProviders();
 
