@@ -55,6 +55,10 @@
 
         public virtual DbSet<ApplicationRole> ApplicationRoles { get; set; } = null!;
 
+        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
+
+        public virtual DbSet<UserDetailsApplicationUser> UserDetailsApplicationUsers { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

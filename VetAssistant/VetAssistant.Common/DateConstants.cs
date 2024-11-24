@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VetAssistant.Common
+﻿namespace VetAssistant.Common
 {
-    internal class DateConstants
+    public class DateConstants
     {
+        public const string AdminRoleName = "Admin";
     }
 }

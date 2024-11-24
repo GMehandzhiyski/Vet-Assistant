@@ -39,7 +39,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             //still not work
             // is need Migration and Update Date base??????
-            services.AddIdentity<UserDetails, ApplicationRole>(options =>
+            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = true;
                 options.Password.RequireDigit = false;
@@ -47,6 +47,9 @@ namespace Microsoft.Extensions.DependencyInjection
                 options.Password.RequireUppercase = false;
             })
                .AddEntityFrameworkStores<VetAssistantDbContext>()
+               .AddRoles<ApplicationRole>()
+               .AddSignInManager<SignInManager<ApplicationUser>>()
+               .AddUserManager<UserManager<ApplicationUser>>()
                .AddDefaultTokenProviders()
                .AddDefaultUI();
 

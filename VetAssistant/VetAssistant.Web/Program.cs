@@ -1,3 +1,5 @@
+using VetAssistant.Data.Extensions;
+
 namespace VetAssistant.Web
 {
     public class Program
@@ -8,6 +10,11 @@ namespace VetAssistant.Web
 
             // Add services to the container.
             builder.Services.AddApplicationDatabase(builder.Configuration);
+
+            //To add in appsettings.json
+            // string adminEmail = builder.Configuration.GetValue<string>("Administrator:Email")!;
+            //string adminUsername = builder.Configuration.GetValue<string>("Administrator:Username")!;
+            // string adminPassword = builder.Configuration.GetValue<string>("Administrator:Password")!;
 
             // Add services to the container.
             // I Add this to extension method
@@ -84,6 +91,15 @@ namespace VetAssistant.Web
             //Authentication and Authorization middleware
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //Seed Admin User
+            var adminSettings = builder.Configuration.GetSection("AdminSettings");
+
+            string email = adminSettings["Email"];
+            string username = adminSettings["Username"];
+            string password = adminSettings["Password"];
+
+            app.SeedAdministrator(email, username, password);
 
             app.MapControllerRoute(
                 name: "default",

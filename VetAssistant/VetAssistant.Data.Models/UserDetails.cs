@@ -8,9 +8,9 @@ namespace VetAssistant.Data.Models
 {
     public class UserDetails : IdentityUser<Guid>
     {
-        //[Key]
-        //[Comment("UserId")]
-        //public Guid Id { get; set; }
+        [Key]
+        [Comment("UserId")]
+        public Guid Id { get; set; }
 
         public UserDetails()
         {
@@ -27,10 +27,10 @@ namespace VetAssistant.Data.Models
         [MaxLength(LastNameMaxLenght)]
         public string LastName { get; set; } = string.Empty;
 
-        //[Required]
-        //[Comment("PhoneNumber")]
-        //[MaxLength(PhoneNumberMaxLenght)]
-        //public override string PhoneNumber { get; set; } = string.Empty;
+        [Required]
+        [Comment("PhoneNumber")]
+        [MaxLength(PhoneNumberMaxLenght)]
+        public override string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
         [Comment("CountryId")]
