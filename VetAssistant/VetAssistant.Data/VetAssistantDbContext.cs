@@ -5,7 +5,7 @@
     using System.Reflection;
     using VetAssistant.Data.Models;
 
-    public class VetAssistantDbContext : IdentityDbContext<UserDetails, ApplicationRole, Guid>
+    public class VetAssistantDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
     {
 
         public VetAssistantDbContext()

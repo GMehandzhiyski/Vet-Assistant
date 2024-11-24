@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using static VetAssistant.Common.ValidationConstants.UserDetails;
 
 namespace VetAssistant.Data.Models
 {
-    public class UserDetails : IdentityUser<Guid>
+    public class UserDetails
     {
         [Key]
         [Comment("UserId")]
@@ -30,7 +29,7 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("PhoneNumber")]
         [MaxLength(PhoneNumberMaxLenght)]
-        public override string PhoneNumber { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
         [Comment("CountryId")]
