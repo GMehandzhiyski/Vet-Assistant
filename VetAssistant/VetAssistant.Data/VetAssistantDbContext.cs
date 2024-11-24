@@ -1,12 +1,11 @@
 ﻿namespace VetAssistant.Data
 {
-    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
     using System.Reflection;
     using VetAssistant.Data.Models;
 
-    public class VetAssistantDbContext : IdentityDbContext<UserDetails, IdentityRole<Guid>, Guid>
+    public class VetAssistantDbContext : IdentityDbContext<UserDetails, ApplicationRole, Guid>
     {
 
         public VetAssistantDbContext()
@@ -53,6 +52,8 @@
         public virtual DbSet<UserDetails> UserDetails { get; set; } = null!;
 
         public virtual DbSet<UserDetailsPet> UserDetailsPets { get; set; } = null!;
+
+        public virtual DbSet<ApplicationRole> ApplicationRoles { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

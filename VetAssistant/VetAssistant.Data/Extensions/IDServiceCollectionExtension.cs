@@ -39,7 +39,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             //still not work
             // is need Migration and Update Date base??????
-            services.AddIdentity<UserDetails, IdentityRole<Guid>>(options =>
+            services.AddIdentity<UserDetails, ApplicationRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = true;
                 options.Password.RequireDigit = false;
