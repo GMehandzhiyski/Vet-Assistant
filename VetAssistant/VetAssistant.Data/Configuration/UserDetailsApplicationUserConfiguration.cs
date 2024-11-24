@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using VetAssistant.Data.Models;
 
 namespace VetAssistant.Data.Configuration
 {
