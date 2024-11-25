@@ -7,22 +7,29 @@ namespace VetAssistant.Data.Models
 {
     public class Pet : BaseDeletableModel<Pet>
     {
+        public Pet()
+        {
+            PetInterventions = new List<PetIntervention>();
+
+            PetBookings = new List<PetBooking>();
+        }
+
         [Required]
-        [Comment("PetName")]
+        [Comment("Pet Name")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        [Comment("PetSpecies")]
+        [Comment("Pet Species")]
         [MaxLength(SpeciesMaxLenght)]
         public string Species { get; set; } = string.Empty;
 
-        [Comment("PetBreed")]
+        [Comment("Pet Breed")]
         [MaxLength(BreedMaxLenght)]
         public string Breed { get; set; } = string.Empty;
 
         [Required]
-        [Comment("GenderId")]
+        [Comment("Gender Id")]
         public Guid GenderId { get; set; }
 
         [Required]
@@ -31,7 +38,7 @@ namespace VetAssistant.Data.Models
         public Gender Gender { get; set; } = null!;
 
         [Required]
-        [Comment("CountryId")]
+        [Comment("Country Id")]
         public Guid CountryId { get; set; }
 
         [Required]
@@ -39,33 +46,32 @@ namespace VetAssistant.Data.Models
         [ForeignKey(nameof(CountryId))]
         public Country Country { get; set; } = null!;
 
-        [Comment("PetDateOfBirth")]
+        [Comment("PetDate Of Birth")]
         public DateTime DateOfBirth { get; set; }
 
-        [Comment("PetNumberOfPassport")]
+        [Comment("PetNumber Of Passport")]
         public int PassportNumber { get; set; }
 
-        [Comment("PetTransponderAlphanumericCode")]
+        [Comment("Pet Transponder Alphanumeric Code")]
         [MaxLength(TransponderCodeLocationMaxLenght)]
         public string TransponderCode { get; set; } = string.Empty;
 
-        [Comment("PetLocationOfTheTransponder")]
+        [Comment("Pet Location Of The Transponder")]
         [MaxLength(TransponderLocationMaxLenght)]
         public string TransponderLocation { get; set; } = string.Empty;
 
-        [Comment("PetImage")]
+        [Comment("Pet Image")]
         public string ImageUrl { get; set; } = string.Empty;
 
-        [Comment("PetAdditionalDetails")]
+        [Comment("Pet Additional Details")]
         [MaxLength(DetailsLocationMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
+        [Comment("Collection Of Pet Intervention")]
+        public virtual ICollection<PetIntervention> PetInterventions { get; set; }
 
-        [Comment("CollectionOfPetIntervention")]
-        public virtual ICollection<PetIntervention> PetInterventions { get; set; } = new List<PetIntervention>();
-
-        [Comment("CollectionOfPetIntervention")]
-        public virtual ICollection<PetBookings> PetBookings { get; set; } = new List<PetBookings>();
+        [Comment("Collection Of Pet Intervention")]
+        public virtual ICollection<PetBooking> PetBookings { get; set; }
     }
 }
 

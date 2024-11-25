@@ -7,11 +7,11 @@ namespace VetAssistant.Data.Models
     public class Gender
     {
         [Key]
-        [Comment("PetGenderId")]
+        [Comment("Pet Gender Id")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
-        [Comment("GenderName")]
+        [Comment("Gender Name")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
     }

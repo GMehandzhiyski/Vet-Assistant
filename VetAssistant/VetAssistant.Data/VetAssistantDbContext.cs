@@ -29,7 +29,7 @@
 
         public virtual DbSet<Doctor> Doctors { get; set; } = null!;
 
-        public virtual DbSet<DoctorBookings> DoctorBookings { get; set; } = null!;
+        public virtual DbSet<DoctorBooking> DoctorBookings { get; set; } = null!;
 
         public virtual DbSet<DoctorIntervention> DoctorInterventions { get; set; } = null!;
 
@@ -41,13 +41,13 @@
 
         public virtual DbSet<Pet> Pets { get; set; } = null!;
 
-        public virtual DbSet<PetBookings> PetBookings { get; set; } = null!;
+        public virtual DbSet<PetBooking> PetBookings { get; set; } = null!;
 
         public virtual DbSet<PetIntervention> PetInterventions { get; set; } = null!;
 
         public virtual DbSet<TypeIntervention> TypeInspections { get; set; } = null!;
 
-        public virtual DbSet<ApplicationUserBookings> ApplicationUserBookings { get; set; } = null!;
+        public virtual DbSet<ApplicationUserBooking> ApplicationUserBookings { get; set; } = null!;
 
         public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
 

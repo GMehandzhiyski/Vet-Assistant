@@ -6,15 +6,15 @@ namespace VetAssistant.Data.Models
     public class ApplicationUserPet
     {
         [Required]
-        [Comment("UserDetailsId")]
+        [Comment("User Details Id")]
         public Guid UserId { get; set; }
 
         [Required]
-        [Comment("UserDetails")]
+        [Comment("User Details")]
         public virtual ApplicationUser ApplicationUser { get; set; } = null!;
 
         [Required]
-        [Comment("PetId")]
+        [Comment("Pet Id")]
         public Guid PetId { get; set; }
 
         [Required]

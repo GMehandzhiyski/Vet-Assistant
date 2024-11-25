@@ -6,7 +6,7 @@ namespace VetAssistant.Data.Models
     public class DoctorIntervention
     {
         [Required]
-        [Comment("DoctorId")]
+        [Comment("Doctor Id")]
         public Guid DoctorId { get; set; }
 
         [Required]
@@ -14,7 +14,7 @@ namespace VetAssistant.Data.Models
         public virtual Doctor Doctor { get; set; } = null!;
 
         [Required]
-        [Comment("InterventionId")]
+        [Comment("Intervention Id")]
         public Guid InterventionId { get; set; }
 
         [Required]

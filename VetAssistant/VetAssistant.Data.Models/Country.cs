@@ -7,14 +7,14 @@ namespace VetAssistant.Data.Models
     public class Country
     {
         [Key]
-        [Comment("CountryId")]
+        [Comment("Country Id")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        [Comment("CountryName")]
+        [Comment("Country Name")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
 
-        [Comment("CountryISOCode")]
+        [Comment("Country ISOCode")]
         [MaxLength(CodeMaxLenght)]
         public string Code { get; set; } = string.Empty;
 

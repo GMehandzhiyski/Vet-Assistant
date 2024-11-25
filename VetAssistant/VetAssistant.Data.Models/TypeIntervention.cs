@@ -7,11 +7,11 @@ namespace VetAssistant.Data.Models
     public class TypeIntervention
     {
         [Key]
-        [Comment("TypeInspectionId")]
+        [Comment("Type Inspection Id")]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
-        [Comment("TypeInterventionName")]
+        [Comment("Type Intervention Name")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = null!;
     }

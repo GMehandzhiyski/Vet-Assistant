@@ -6,7 +6,7 @@ namespace VetAssistant.Data.Models
     public class DoctorPet
     {
         [Required]
-        [Comment("DoctorId")]
+        [Comment("Doctor Id")]
         public Guid DoctorId { get; set; }
 
         [Required]

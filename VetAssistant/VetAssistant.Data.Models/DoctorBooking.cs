@@ -3,23 +3,22 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VetAssistant.Data.Models
 {
-    public class PetBookings
+    public class DoctorBooking
     {
         [Required]
-        [Comment("PetId")]
-        public Guid PetId { get; set; }
+        [Comment("Doctor Id")]
+        public Guid DoctorId { get; set; }
 
         [Required]
-        [Comment("Pet")]
-        public virtual Pet Pet { get; set; } = null!;
+        [Comment("Doctor")]
+        public virtual Doctor Doctor { get; set; } = null!;
 
         [Required]
-        [Comment("Booking")]
+        [Comment("Booking Id")]
         public Guid BookingId { get; set; }
 
         [Required]
         [Comment("Booking")]
         public virtual Booking Booking { get; set; } = null!;
-
     }
 }

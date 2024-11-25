@@ -8,6 +8,14 @@ namespace VetAssistant.Data.Models
 {
     public class ApplicationUser : IdentityUser<Guid>, IAuditInfo, IDeletableEntity
     {
+        public ApplicationUser()
+        {
+            UserDetailsPets = new List<ApplicationUserPet>();
+
+            ApplicationUserBookings = new List<ApplicationUserBooking>();
+        }
+
+
         [Required]
         [Comment("First Name")]
         [MaxLength(FirstNameMaxLenght)]
@@ -38,7 +46,7 @@ namespace VetAssistant.Data.Models
         public string Address { get; set; } = null!;
 
         [Required]
-        [Comment("ImageUrl")]
+        [Comment("Image Url")]
         public string ImageUrl { get; set; } = string.Empty;
 
         [Comment("Date of create")]
@@ -53,11 +61,11 @@ namespace VetAssistant.Data.Models
         [Comment("Date of Delete")]
         public DateTime? DeletedOn { get; set; }
 
-        [Comment("CollectionOfPetIntervention")]
-        public virtual ICollection<ApplicationUserPet> UserDetailsPets { get; set; } = new List<ApplicationUserPet>();
+        [Comment("Collection Of Pet Intervention")]
+        public virtual ICollection<ApplicationUserPet> UserDetailsPets { get; set; }
 
-        [Comment("CollectionOfPetIntervention")]
-        public virtual ICollection<ApplicationUserBookings> UserBookings { get; set; } = new List<ApplicationUserBookings>();
+        [Comment("Collection Of Pet Intervention")]
+        public virtual ICollection<ApplicationUserBooking> ApplicationUserBookings { get; set; }
 
     }
 }

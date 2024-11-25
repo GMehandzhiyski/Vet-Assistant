@@ -8,11 +8,11 @@ namespace VetAssistant.Data.Models
     public class Booking : BaseDeletableModel<Booking>
     {
         [Required]
-        [Comment("DateOfIntervention")]
+        [Comment("Date Of Intervention")]
         public DateTime Date { get; set; }
 
         [Required]
-        [Comment("UserId")]
+        [Comment("User Id")]
         public Guid UserId { get; set; }
 
         [Required]
@@ -21,7 +21,7 @@ namespace VetAssistant.Data.Models
         public ApplicationUser ApplicationUser { get; set; } = null!;
 
         [Required]
-        [Comment("PetId")]
+        [Comment("Pet Id")]
         public Guid PetId { get; set; }
 
         [Required]
@@ -30,7 +30,7 @@ namespace VetAssistant.Data.Models
         public Pet Pet { get; set; } = null!;
 
         [Required]
-        [Comment("DoctorId")]
+        [Comment("Doctor Id")]
         public Guid DoctorId { get; set; }
 
         [Required]
@@ -39,11 +39,11 @@ namespace VetAssistant.Data.Models
         public Doctor Doctor { get; set; } = null!;
 
         [Required]
-        [Comment("TypeOfInspection")]
+        [Comment("Type Of Inspection")]
         public Guid TypeInspectionId { get; set; }
 
         [Required]
-        [Comment("TypeOfInspection")]
+        [Comment("Type Of Inspection")]
         [ForeignKey(nameof(TypeInspectionId))]
         public TypeIntervention TypeInspection { get; set; } = null!;
 

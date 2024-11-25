@@ -7,32 +7,39 @@ namespace VetAssistant.Data.Models
 {
     public class Doctor : BaseDeletableModel<Doctor>
     {
+        public Doctor()
+        {
+            DoctorPets = new List<DoctorPet>();
+            DoctorInterventions = new List<DoctorIntervention>();
+            DoctorBookings = new List<DoctorBooking>();
+        }
+
         [Required]
-        [Comment("DoctorFirstName")]
+        [Comment("Doctor First Name")]
         [MaxLength(FirstNameMaxLenght)]
         public string FirstName { get; set; } = string.Empty;
 
         [Required]
-        [Comment("DoctorLastName")]
+        [Comment("Doctor Last Name")]
         [MaxLength(LastNameMaxLenght)]
         public string LastName { get; set; } = string.Empty;
 
         [Required]
-        [Comment("DoctorDateOfBirth")]
+        [Comment("Doctor Date Of Birth")]
         public DateTime DateOfBirth { get; set; }
 
         [Required]
-        [Comment("DoctorEmailAddress")]
+        [Comment("Doctor Email Address")]
         [MaxLength(EmailMaxLenght)]
         public string Email { get; set; } = string.Empty;
 
         [Required]
-        [Comment("PhoneNumber")]
+        [Comment("Phone Number")]
         [MaxLength(PhoneNumberMaxLenght)]
         public string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
-        [Comment("CountryId")]
+        [Comment("Country Id")]
         public Guid CountryId { get; set; }
 
         [Required]
@@ -41,40 +48,40 @@ namespace VetAssistant.Data.Models
         public Country Country { get; set; } = null!;
 
         [Required]
-        [Comment("DoctorTown")]
+        [Comment("Doctor Town")]
         [MaxLength(TownMaxLenght)]
         public string Town { get; set; } = string.Empty;
 
         [Required]
-        [Comment("DoctorEducation")]
+        [Comment("Doctor Education")]
         [MaxLength(EducationMaxLenght)]
         public string Education { get; set; } = string.Empty;
 
         [Required]
-        [Comment("DoctorSpecialty")]
+        [Comment("Doctor Specialty")]
         [MaxLength(SpecialtyMaxLenght)]
         public string Specialty { get; set; } = string.Empty;
 
         [Required]
-        [Comment("DoctorExperience")]
+        [Comment("Doctor Experience")]
         [MaxLength(ExperienceMaxLenght)]
         public string Experience { get; set; } = string.Empty;
 
-        [Comment("DoctorDetails")]
+        [Comment("Doctor Details")]
         [MaxLength(DetailsMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
-        [Comment("DoctorImage")]
+        [Comment("Doctor Image")]
         public string ImageUrl { get; set; } = string.Empty;
 
-        [Comment("CollectionOfDoctorPet")]
-        public virtual ICollection<DoctorPet> DoctorPets { get; set; } = new List<DoctorPet>();
+        [Comment("Collection Of Doctor Pet")]
+        public virtual ICollection<DoctorPet> DoctorPets { get; set; }
 
-        [Comment("CollectionOfDoctorIntervention")]
-        public virtual ICollection<DoctorIntervention> DoctorInterventions { get; set; } = new List<DoctorIntervention>();
+        [Comment("Collection Of Doctor Intervention")]
+        public virtual ICollection<DoctorIntervention> DoctorInterventions { get; set; }
 
-        [Comment("CollectionOfDoctorBookings")]
-        public virtual ICollection<DoctorBookings> DoctorBookings { get; set; } = new List<DoctorBookings>();
+        [Comment("Collection Of Doctor Bookings")]
+        public virtual ICollection<DoctorBooking> DoctorBookings { get; set; }
 
     }
 }

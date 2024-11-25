@@ -7,23 +7,28 @@ namespace VetAssistant.Data.Models
 {
     public class Clinic : BaseDeletableModel<Clinic>
     {
+        public Clinic()
+        {
+            ClinicDoctors = new List<ClinicDoctor>();
+        }
+
         [Required]
-        [Comment("ClinicName")]
+        [Comment("Clinic Name")]
         [MaxLength(NameMaxLenght)]
         public string Name { get; set; } = string.Empty;
 
         [Required]
-        [Comment("ClinicTown")]
+        [Comment("Clinic Town")]
         [MaxLength(TownMaxLenght)]
         public string Town { get; set; } = string.Empty;
 
         [Required]
-        [Comment("ClinicAddress")]
+        [Comment("Clinic Address")]
         [MaxLength(AddressMaxLenght)]
         public string Address { get; set; } = string.Empty;
 
         [Required]
-        [Comment("CountryId")]
+        [Comment("Country Id")]
         public Guid CountryId { get; set; }
 
         [Required]
@@ -32,22 +37,22 @@ namespace VetAssistant.Data.Models
         public Country Country { get; set; } = null!;
 
         [Required]
-        [Comment("ClinicEmail")]
+        [Comment("Clinic Email")]
         [MaxLength(EmailMaxLenght)]
         public string Email { get; set; } = string.Empty;
 
         [Required]
-        [Comment("ClinicPhone")]
+        [Comment("Clinic Phone")]
         [MaxLength(PhoneNumberMaxLenght)]
         public string PhoneNumber { get; set; } = null!;
 
         [Required]
-        [Comment("ClinicWorkingTime")]
+        [Comment("Clinic Working Time")]
         [MaxLength(WorkingTimeMaxLenght)]
         public string WorkingTime { get; set; } = null!;
 
-        [Comment("CollectionOfClinicsDoctors")]
-        public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; } = new List<ClinicDoctor>();
+        [Comment("Collection Of Clinics Doctors")]
+        public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; }
 
     }
 }
