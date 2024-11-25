@@ -42,7 +42,7 @@ namespace VetAssistant.Data.Models
         public string ImageUrl { get; set; } = string.Empty;
 
         [Comment("CollectionOfPetIntervention")]
-        public virtual ICollection<UserDetailsPet> UserDetailsPets { get; set; } = new List<UserDetailsPet>();
+        public virtual ICollection<ApplicationUserPet> UserDetailsPets { get; set; } = new List<ApplicationUserPet>();
 
         [Comment("CollectionOfPetIntervention")]
         public virtual ICollection<UserBookings> UserBookings { get; set; } = new List<UserBookings>();

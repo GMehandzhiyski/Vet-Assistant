@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VetAssistant.Data.Models
 {
-    public class UserDetailsPet
+    public class ApplicationUserPet
     {
         [Required]
         [Comment("UserDetailsId")]

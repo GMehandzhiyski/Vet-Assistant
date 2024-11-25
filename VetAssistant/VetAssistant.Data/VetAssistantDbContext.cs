@@ -51,7 +51,7 @@
 
         public virtual DbSet<ApplicationUser> UserDetails { get; set; } = null!;
 
-        public virtual DbSet<UserDetailsPet> UserDetailsPets { get; set; } = null!;
+        public virtual DbSet<ApplicationUserPet> UserDetailsPets { get; set; } = null!;
 
         public virtual DbSet<ApplicationRole> ApplicationRoles { get; set; } = null!;
 
