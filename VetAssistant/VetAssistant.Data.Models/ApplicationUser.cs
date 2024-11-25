@@ -45,6 +45,6 @@ namespace VetAssistant.Data.Models
         public virtual ICollection<ApplicationUserPet> UserDetailsPets { get; set; } = new List<ApplicationUserPet>();
 
         [Comment("CollectionOfPetIntervention")]
-        public virtual ICollection<UserBookings> UserBookings { get; set; } = new List<UserBookings>();
+        public virtual ICollection<ApplicationUserBookings> UserBookings { get; set; } = new List<ApplicationUserBookings>();
     }
 }

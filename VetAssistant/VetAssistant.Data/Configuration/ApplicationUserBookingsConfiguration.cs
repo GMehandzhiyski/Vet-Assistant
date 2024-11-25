@@ -4,9 +4,9 @@ using VetAssistant.Data.Models;
 
 namespace VetAssistant.Data.Configuration
 {
-    public class UserBookingsConfiguration : IEntityTypeConfiguration<UserBookings>
+    public class ApplicationUserBookingsConfiguration : IEntityTypeConfiguration<ApplicationUserBookings>
     {
-        public void Configure(EntityTypeBuilder<UserBookings> builder)
+        public void Configure(EntityTypeBuilder<ApplicationUserBookings> builder)
         {
             builder
                  .HasKey(ub => new { ub.UserDetailsId, ub.BookingId });

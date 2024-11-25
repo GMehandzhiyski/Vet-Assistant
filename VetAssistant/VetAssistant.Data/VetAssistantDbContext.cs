@@ -47,11 +47,11 @@
 
         public virtual DbSet<TypeIntervention> TypeInspections { get; set; } = null!;
 
-        public virtual DbSet<UserBookings> UserBookings { get; set; } = null!;
+        public virtual DbSet<ApplicationUserBookings> ApplicationUserBookings { get; set; } = null!;
 
-        public virtual DbSet<ApplicationUser> UserDetails { get; set; } = null!;
+        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
 
-        public virtual DbSet<ApplicationUserPet> UserDetailsPets { get; set; } = null!;
+        public virtual DbSet<ApplicationUserPet> ApplicationUserPets { get; set; } = null!;
 
         public virtual DbSet<ApplicationRole> ApplicationRoles { get; set; } = null!;
 

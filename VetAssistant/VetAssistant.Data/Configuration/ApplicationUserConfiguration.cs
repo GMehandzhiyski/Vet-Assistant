@@ -4,7 +4,7 @@ using VetAssistant.Data.Models;
 
 namespace VetAssistant.Data.Configuration
 {
-    public class UserDetailsConfiguration : IEntityTypeConfiguration<ApplicationUser>
+    public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
