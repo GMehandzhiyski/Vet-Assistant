@@ -18,7 +18,7 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("User")]
         [ForeignKey(nameof(UserId))]
-        public UserDetails UserDetails { get; set; } = null!;
+        public ApplicationUser ApplicationUser { get; set; } = null!;
 
         [Required]
         [Comment("PetId")]

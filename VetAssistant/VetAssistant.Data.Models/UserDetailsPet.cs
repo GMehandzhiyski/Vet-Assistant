@@ -11,7 +11,7 @@ namespace VetAssistant.Data.Models
 
         [Required]
         [Comment("UserDetails")]
-        public virtual UserDetails UserDetails { get; set; } = null!;
+        public virtual ApplicationUser ApplicationUser { get; set; } = null!;
 
         [Required]
         [Comment("PetId")]

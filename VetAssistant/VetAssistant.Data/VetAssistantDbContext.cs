@@ -5,7 +5,7 @@
     using System.Reflection;
     using VetAssistant.Data.Models;
 
-    public class VetAssistantDbContext : IdentityDbContext<UserDetails, ApplicationRole, Guid>
+    public class VetAssistantDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
     {
 
         public VetAssistantDbContext()
@@ -49,7 +49,7 @@
 
         public virtual DbSet<UserBookings> UserBookings { get; set; } = null!;
 
-        public virtual DbSet<UserDetails> UserDetails { get; set; } = null!;
+        public virtual DbSet<ApplicationUser> UserDetails { get; set; } = null!;
 
         public virtual DbSet<UserDetailsPet> UserDetailsPets { get; set; } = null!;
 

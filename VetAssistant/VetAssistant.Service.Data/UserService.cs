@@ -6,9 +6,9 @@ namespace VetAssistant.Service.Data
 {
     public class UserService : BaseService, IUserService
     {
-        private readonly IRepository<UserDetails, Guid> userRepository;
+        private readonly IRepository<ApplicationUser, Guid> userRepository;
 
-        public UserService(IRepository<UserDetails, Guid> _userRepository)
+        public UserService(IRepository<ApplicationUser, Guid> _userRepository)
         {
             userRepository = _userRepository;
         }

@@ -6,7 +6,7 @@ using static VetAssistant.Common.ValidationConstants.UserDetails;
 
 namespace VetAssistant.Data.Models
 {
-    public class UserDetails : IdentityUser<Guid>
+    public class ApplicationUser : IdentityUser<Guid>
     {
         [Required]
         [Comment("FirstName")]

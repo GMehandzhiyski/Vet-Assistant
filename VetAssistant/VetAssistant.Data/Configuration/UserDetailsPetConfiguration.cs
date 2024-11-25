@@ -12,7 +12,7 @@ namespace VetAssistant.Data.Configuration
                 .HasKey(up => new { up.UserId, up.PetId });
 
             builder
-                .HasOne(u => u.UserDetails)
+                .HasOne(u => u.ApplicationUser)
                 .WithMany(up => up.UserDetailsPets)
                 .OnDelete(DeleteBehavior.NoAction);
 
