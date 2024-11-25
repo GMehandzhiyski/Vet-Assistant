@@ -7,7 +7,7 @@ namespace VetAssistant.Data.Models
     {
         [Required]
         [Comment("UserId")]
-        public Guid UserDetailsId { get; set; }
+        public Guid ApplicationUserId { get; set; }
 
         [Required]
         [Comment("UserDetails")]

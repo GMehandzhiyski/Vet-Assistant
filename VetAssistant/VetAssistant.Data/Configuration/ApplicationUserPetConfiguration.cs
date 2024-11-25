@@ -9,11 +9,11 @@ namespace VetAssistant.Data.Configuration
         public void Configure(EntityTypeBuilder<ApplicationUserPet> builder)
         {
             builder
-                .HasKey(up => new { up.UserId, up.PetId });
+                .HasKey(up => new { up.ApplicationUserId, up.PetId });
 
             builder
                 .HasOne(u => u.ApplicationUser)
-                .WithMany(up => up.UserDetailsPets)
+                .WithMany(up => up.ApplicationUserPets)
                 .OnDelete(DeleteBehavior.NoAction);
 
             builder

@@ -9,19 +9,19 @@ namespace VetAssistant.Data.Configuration
         public void Configure(EntityTypeBuilder<ApplicationUserBooking> builder)
         {
             builder
-                 .HasKey(ub => new { ub.UserDetailsId, ub.BookingId });
+                 .HasKey(ub => new { ub.ApplicationUserId, ub.BookingId });
 
             builder
                 .HasOne(b => b.ApplicationUser)
                 .WithMany(us => us.ApplicationUserBookings)
-                .HasForeignKey(ub => ub.UserDetailsId)
+                .HasForeignKey(ub => ub.ApplicationUserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             builder
                 .HasOne(ub => ub.Booking)
                 .WithMany()
                 .HasForeignKey(ub => ub.BookingId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

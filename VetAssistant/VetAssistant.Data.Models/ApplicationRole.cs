@@ -11,8 +11,8 @@ namespace VetAssistant.Data.Models
 
         }
 
-        public ApplicationRole(string roleName)
-            : base(roleName)
+        public ApplicationRole(string name)
+            : base(name)
         {
             Id = Guid.NewGuid();
             CreatedOn = DateTime.UtcNow;

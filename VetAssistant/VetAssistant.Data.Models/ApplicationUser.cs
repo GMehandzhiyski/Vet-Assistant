@@ -10,7 +10,7 @@ namespace VetAssistant.Data.Models
     {
         public ApplicationUser()
         {
-            UserDetailsPets = new List<ApplicationUserPet>();
+            ApplicationUserPets = new List<ApplicationUserPet>();
 
             ApplicationUserBookings = new List<ApplicationUserBooking>();
         }
@@ -62,7 +62,7 @@ namespace VetAssistant.Data.Models
         public DateTime? DeletedOn { get; set; }
 
         [Comment("Collection Of Pet Intervention")]
-        public virtual ICollection<ApplicationUserPet> UserDetailsPets { get; set; }
+        public virtual ICollection<ApplicationUserPet> ApplicationUserPets { get; set; }
 
         [Comment("Collection Of Pet Intervention")]
         public virtual ICollection<ApplicationUserBooking> ApplicationUserBookings { get; set; }
