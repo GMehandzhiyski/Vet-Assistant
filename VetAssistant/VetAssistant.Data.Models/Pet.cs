@@ -5,12 +5,8 @@ using static VetAssistant.Common.ValidationConstants.Pet;
 
 namespace VetAssistant.Data.Models
 {
-    public class Pet
+    public class Pet : BaseDeletableModel<Pet>
     {
-        [Key]
-        [Comment("PetId")]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         [Required]
         [Comment("PetName")]
         [MaxLength(NameMaxLenght)]
@@ -64,8 +60,6 @@ namespace VetAssistant.Data.Models
         [MaxLength(DetailsLocationMaxLenght)]
         public string Details { get; set; } = string.Empty;
 
-        [Comment("PetSoftDeleted")]
-        public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfPetIntervention")]
         public virtual ICollection<PetIntervention> PetInterventions { get; set; } = new List<PetIntervention>();
