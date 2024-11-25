@@ -5,12 +5,8 @@ using static VetAssistant.Common.ValidationConstants.Doctor;
 
 namespace VetAssistant.Data.Models
 {
-    public class Doctor
+    public class Doctor : BaseDeletableModel<Doctor>
     {
-        [Key]
-        [Comment("DoctorId")]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         [Required]
         [Comment("DoctorFirstName")]
         [MaxLength(FirstNameMaxLenght)]
@@ -70,9 +66,6 @@ namespace VetAssistant.Data.Models
 
         [Comment("DoctorImage")]
         public string ImageUrl { get; set; } = string.Empty;
-
-        [Comment("DoctorSoftDelete")]
-        public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfDoctorPet")]
         public virtual ICollection<DoctorPet> DoctorPets { get; set; } = new List<DoctorPet>();
