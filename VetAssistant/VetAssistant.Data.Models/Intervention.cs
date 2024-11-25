@@ -6,11 +6,6 @@ namespace VetAssistant.Data.Models
 {
     public class Intervention
     {
-
-        [Key]
-        [Comment("InterventionId")]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         [Required]
         [Comment("DateOfIntervention")]
         public DateTime Date { get; set; }
@@ -68,8 +63,5 @@ namespace VetAssistant.Data.Models
 
         [Comment("InterventionStatus")]
         public bool IsInterventionDone { get; set; } = false;
-
-        [Comment("BookingInterventionSoftDeleted")]
-        public bool IsDeleted { get; set; } = false;
     }
 }
