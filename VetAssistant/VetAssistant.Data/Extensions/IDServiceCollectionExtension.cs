@@ -37,19 +37,17 @@ namespace Microsoft.Extensions.DependencyInjection
 
             //still not work
             // is need Migration and Update Date base??????
-            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+            services.AddDefaultIdentity<ApplicationUser>()
+                    .AddRoles<ApplicationRole>()
+                    .AddEntityFrameworkStores<VetAssistantDbContext>();
+
+            services.Configure<IdentityOptions>(options =>
             {
-                options.SignIn.RequireConfirmedAccount = false;
-                options.Password.RequireDigit = false;
+                options.SignIn.RequireConfirmedEmail = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
-            })
-               .AddEntityFrameworkStores<VetAssistantDbContext>()
-               .AddRoles<ApplicationRole>()
-               .AddSignInManager<SignInManager<ApplicationUser>>()
-               .AddUserManager<UserManager<ApplicationUser>>()
-               .AddDefaultTokenProviders()
-               .AddDefaultUI();
+                options.Password.RequiredLength = 6;
+            });
 
             services.ConfigureApplicationCookie(option =>
             {

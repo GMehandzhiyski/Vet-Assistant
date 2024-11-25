@@ -1,5 +1,3 @@
-using VetAssistant.Data.Extensions;
-
 namespace VetAssistant.Web
 {
     public class Program
@@ -93,13 +91,13 @@ namespace VetAssistant.Web
             app.UseAuthorization();
 
             //Seed Admin User
-            var adminSettings = builder.Configuration.GetSection("AdminSettings");
+            //var adminSettings = builder.Configuration.GetSection("AdminSettings");
 
-            string email = adminSettings["Email"];
-            string username = adminSettings["Username"];
-            string password = adminSettings["Password"];
+            //string email = adminSettings["Email"];
+            //string username = adminSettings["Username"];
+            //string password = adminSettings["Password"];
 
-            app.SeedAdministrator(email, username, password);
+            //app.SeedAdministrator(email, username, password);
 
             app.MapControllerRoute(
                 name: "default",
