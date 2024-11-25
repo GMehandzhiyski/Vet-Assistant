@@ -5,12 +5,8 @@ using static VetAssistant.Common.ValidationConstants.Clinic;
 
 namespace VetAssistant.Data.Models
 {
-    public class Clinic
+    public class Clinic : BaseDeletableModel<Clinic>
     {
-        [Key]
-        [Comment("ClinicId")]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         [Required]
         [Comment("ClinicName")]
         [MaxLength(NameMaxLenght)]
@@ -49,9 +45,6 @@ namespace VetAssistant.Data.Models
         [Comment("ClinicWorkingTime")]
         [MaxLength(WorkingTimeMaxLenght)]
         public string WorkingTime { get; set; } = null!;
-
-        [Comment("ClinicSoftDeleted")]
-        public bool IsDeleted { get; set; } = false;
 
         [Comment("CollectionOfClinicsDoctors")]
         public virtual ICollection<ClinicDoctor> ClinicDoctors { get; set; } = new List<ClinicDoctor>();
