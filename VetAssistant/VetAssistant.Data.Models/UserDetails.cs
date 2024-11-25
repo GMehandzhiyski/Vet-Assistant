@@ -1,21 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using static VetAssistant.Common.ValidationConstants.UserDetails;
 
 namespace VetAssistant.Data.Models
 {
-    public class UserDetails
+    public class UserDetails : IdentityUser<Guid>
     {
-        [Key]
-        [Comment("UserId")]
-        public Guid Id { get; set; }
-
-        public UserDetails()
-        {
-            Id = Guid.NewGuid();
-        }
-
         [Required]
         [Comment("FirstName")]
         [MaxLength(FirstNameMaxLenght)]
@@ -25,11 +17,6 @@ namespace VetAssistant.Data.Models
         [Comment("LastName")]
         [MaxLength(LastNameMaxLenght)]
         public string LastName { get; set; } = string.Empty;
-
-        [Required]
-        [Comment("PhoneNumber")]
-        [MaxLength(PhoneNumberMaxLenght)]
-        public string PhoneNumber { get; set; } = string.Empty;
 
         [Required]
         [Comment("CountryId")]
@@ -53,11 +40,6 @@ namespace VetAssistant.Data.Models
         [Required]
         [Comment("ImageUrl")]
         public string ImageUrl { get; set; } = string.Empty;
-
-        [Required]
-        [Comment("UserDetailsSoftDeleted")]
-        public bool IsDeleted { get; set; } = false;
-
 
         [Comment("CollectionOfPetIntervention")]
         public virtual ICollection<UserDetailsPet> UserDetailsPets { get; set; } = new List<UserDetailsPet>();

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -24,7 +24,6 @@
   <ItemGroup>
     <ProjectReference Include="..\VetAssistant.Common\VetAssistant.Common.csproj" />
     <ProjectReference Include="..\VetAssistant.Data.Models\VetAssistant.Data.Models.csproj" />
-    <ProjectReference Include="..\VetAssistant.Data\VetAssistant.Data.csproj" />
     <ProjectReference Include="..\VetAssistant.Service.Data\VetAssistant.Service.Data.csproj" />
     <ProjectReference Include="..\VetAssistant.Web.Infrastructure\VetAssistant.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\VetAssistant.Web.ViewModels\VetAssistant.Web.ViewModels.csproj" />

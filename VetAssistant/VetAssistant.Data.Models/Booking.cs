@@ -1,17 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using VetAssistant.Web.Infrastructure.Extensions;
 using static VetAssistant.Common.ValidationConstants.Booking;
 
 namespace VetAssistant.Data.Models
 {
-    public class Booking : ISoftDeletable
+    public class Booking : BaseDeletableModel<Booking>
     {
-        [Key]
-        [Comment("BookingInterventionId")]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         [Required]
         [Comment("DateOfIntervention")]
         public DateTime Date { get; set; }
@@ -56,11 +51,5 @@ namespace VetAssistant.Data.Models
         [MaxLength(DescriptionMaxLenght)]
         [Comment("Description")]
         public string Description { get; set; } = string.Empty;
-
-        [Comment("BookingInterventionSoftDeleted")]
-        public bool IsDeleted { get; set; } = false;
-
-        [Comment("DeletionTime")]
-        public DateTime? DeletedOn { get; set; }
     }
 }

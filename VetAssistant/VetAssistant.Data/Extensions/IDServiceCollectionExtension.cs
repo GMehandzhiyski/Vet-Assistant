@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using VetAssistant.Data;
 using VetAssistant.Data.Models;
-using VetAssistant.Data.Repository;
-using VetAssistant.Data.Repository.Interfaces;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -39,17 +37,17 @@ namespace Microsoft.Extensions.DependencyInjection
 
             //still not work
             // is need Migration and Update Date base??????
-            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+            services.AddIdentity<UserDetails, ApplicationRole>(options =>
             {
-                options.SignIn.RequireConfirmedAccount = true;
+                options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequireDigit = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
             })
                .AddEntityFrameworkStores<VetAssistantDbContext>()
                .AddRoles<ApplicationRole>()
-               .AddSignInManager<SignInManager<ApplicationUser>>()
-               .AddUserManager<UserManager<ApplicationUser>>()
+               .AddSignInManager<SignInManager<UserDetails>>()
+               .AddUserManager<UserManager<UserDetails>>()
                .AddDefaultTokenProviders()
                .AddDefaultUI();
 
@@ -66,7 +64,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IRepository<Booking, Guid>, Repository<Booking, Guid>>();
+            //services.AddScoped<IRepository<Booking, Guid>, Repository<Booking, Guid>>();
 
             return services;
         }

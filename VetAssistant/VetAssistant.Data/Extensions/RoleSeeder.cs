@@ -15,10 +15,10 @@ namespace VetAssistant.Data.Extensions
 
             RoleManager<ApplicationRole>? roleManager = serviceProvider
                 .GetService<RoleManager<ApplicationRole>>();
-            IUserStore<ApplicationUser>? userStore = serviceProvider
-                .GetService<IUserStore<ApplicationUser>>();
-            UserManager<ApplicationUser>? userManager = serviceProvider
-                .GetService<UserManager<ApplicationUser>>();
+            IUserStore<UserDetails>? userStore = serviceProvider
+                .GetService<IUserStore<UserDetails>>();
+            UserManager<UserDetails>? userManager = serviceProvider
+                .GetService<UserManager<UserDetails>>();
 
             if (roleManager == null)
             {
@@ -29,13 +29,13 @@ namespace VetAssistant.Data.Extensions
             if (userStore == null)
             {
                 throw new ArgumentNullException(nameof(userStore),
-                    $"Service for {typeof(IUserStore<ApplicationUser>)} cannot be obtained!");
+                    $"Service for {typeof(IUserStore<UserDetails>)} cannot be obtained!");
             }
 
             if (userManager == null)
             {
                 throw new ArgumentNullException(nameof(userManager),
-                    $"Service for {typeof(UserManager<ApplicationUser>)} cannot be obtained!");
+                    $"Service for {typeof(UserManager<UserDetails>)} cannot be obtained!");
             }
 
 
@@ -56,7 +56,7 @@ namespace VetAssistant.Data.Extensions
                 adminRole = await roleManager.FindByNameAsync(AdminRoleName);
             }
 
-            ApplicationUser? adminUser = await userManager.FindByEmailAsync(email);
+            UserDetails? adminUser = await userManager.FindByEmailAsync(email);
             if (adminUser == null)
             {
                 adminUser = await
@@ -77,10 +77,10 @@ namespace VetAssistant.Data.Extensions
             return app;
         }
 
-        private static async Task<ApplicationUser> CreateAdminUserAsync(string email, string username, string password,
-            IUserStore<ApplicationUser> userStore, UserManager<ApplicationUser> userManager)
+        private static async Task<UserDetails> CreateAdminUserAsync(string email, string username, string password,
+            IUserStore<UserDetails> userStore, UserManager<UserDetails> userManager)
         {
-            ApplicationUser applicationUser = new ApplicationUser
+            UserDetails applicationUser = new UserDetails
             {
                 Email = email
             };

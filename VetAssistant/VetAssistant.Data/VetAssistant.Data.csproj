@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VetAssistant.Data.Models\VetAssistant.Data.Models.csproj" />
-    <ProjectReference Include="..\VetAssistant.Web.Infrastructure\VetAssistant.Web.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

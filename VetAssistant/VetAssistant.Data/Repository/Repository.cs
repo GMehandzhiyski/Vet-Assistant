@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VetAssistant.Data.Models;
 using VetAssistant.Data.Repository.Interfaces;
-using VetAssistant.Web.Infrastructure.Extensions;
 
 namespace VetAssistant.Data.Repository
 {
     public class Repository<TType, TId> : IRepository<TType, TId>
-        where TType : class, ISoftDeletable
+        where TType : class, IDeletableEntity
     {
         private readonly VetAssistantDbContext context;
         private readonly DbSet<TType> dbSet;
