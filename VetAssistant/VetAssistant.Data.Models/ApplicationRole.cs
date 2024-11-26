@@ -6,7 +6,7 @@ namespace VetAssistant.Data.Models
     public class ApplicationRole : IdentityRole<Guid>, IAuditInfo, IDeletableEntity
     {
         public ApplicationRole()
-            : base()
+            : this(null)
         {
 
         }

@@ -1,5 +1,6 @@
 ﻿namespace VetAssistant.Data
 {
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
     using System.Reflection;
@@ -60,6 +61,14 @@
             base.OnModelCreating(builder);
             //automatic add configuration
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+
+            builder.Entity<IdentityUserToken<Guid>>()
+                .HasKey(t => new { t.UserId, t.LoginProvider, t.Name });
+
+            builder.Entity<IdentityUserToken<Guid>>()
+                .Property(t => t.Name)
+                .HasMaxLength(128);
         }
     }
 }

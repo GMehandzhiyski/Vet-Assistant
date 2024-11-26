@@ -40,7 +40,6 @@ namespace VetAssistant.Data.Models
         [MaxLength(TownMaxLenght)]
         public string Town { get; set; } = string.Empty;
 
-        [Required]
         [Comment("Address")]
         [MaxLength(AddressMaxLenght)]
         public string Address { get; set; } = null!;

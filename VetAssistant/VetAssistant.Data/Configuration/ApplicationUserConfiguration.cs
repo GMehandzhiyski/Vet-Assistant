@@ -13,6 +13,8 @@ namespace VetAssistant.Data.Configuration
                  .WithMany()
                  .HasForeignKey(ud => ud.CountryId)
                  .OnDelete(DeleteBehavior.NoAction);
+
+
         }
     }
 }
