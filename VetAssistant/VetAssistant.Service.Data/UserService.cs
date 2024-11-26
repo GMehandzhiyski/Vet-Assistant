@@ -13,6 +13,25 @@ namespace VetAssistant.Service.Data
             userRepository = _userRepository;
         }
 
+        public Task<bool> AssignUserToRoleAsync(Guid userId, string roleName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteUserAsync(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> RemoveUserRoleAsync(Guid userId, string roleName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UserExistsByIdAsync(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
