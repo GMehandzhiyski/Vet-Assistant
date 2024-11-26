@@ -42,7 +42,7 @@ namespace VetAssistant.Data.Models
         public string? ImageUrl { get; set; } = string.Empty;
 
         [Comment("Date of create")]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
 
         [Comment("Date of modification")]
         public DateTime? ModifiedOn { get; set; }

@@ -29,4 +29,9 @@
     <ProjectReference Include="..\VetAssistant.Web.ViewModels\VetAssistant.Web.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Admin\Views\UserManagemet\" />
+  </ItemGroup>
+
 </Project>
