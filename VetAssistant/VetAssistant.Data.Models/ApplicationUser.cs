@@ -15,38 +15,31 @@ namespace VetAssistant.Data.Models
             ApplicationUserBookings = new List<ApplicationUserBooking>();
         }
 
-
-        [Required]
         [Comment("First Name")]
         [MaxLength(FirstNameMaxLenght)]
-        public string FirstName { get; set; } = string.Empty;
+        public string? FirstName { get; set; } = string.Empty;
 
-        [Required]
         [Comment("Last Name")]
         [MaxLength(LastNameMaxLenght)]
-        public string LastName { get; set; } = string.Empty;
+        public string? LastName { get; set; } = string.Empty;
 
-        [Required]
         [Comment("Country Id")]
-        public Guid CountryId { get; set; }
+        public Guid? CountryId { get; set; }
 
-        [Required]
         [Comment("Country")]
         [ForeignKey(nameof(CountryId))]
-        public Country Country { get; set; } = null!;
+        public Country? Country { get; set; } = null!;
 
-        [Required]
         [Comment("Town")]
         [MaxLength(TownMaxLenght)]
-        public string Town { get; set; } = string.Empty;
+        public string? Town { get; set; } = string.Empty;
 
         [Comment("Address")]
         [MaxLength(AddressMaxLenght)]
         public string? Address { get; set; }
 
-        [Required]
         [Comment("Image Url")]
-        public string ImageUrl { get; set; } = string.Empty;
+        public string? ImageUrl { get; set; } = string.Empty;
 
         [Comment("Date of create")]
         public DateTime CreatedOn { get; set; }
