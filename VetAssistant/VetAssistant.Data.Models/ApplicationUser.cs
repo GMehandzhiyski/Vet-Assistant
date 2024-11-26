@@ -42,7 +42,7 @@ namespace VetAssistant.Data.Models
 
         [Comment("Address")]
         [MaxLength(AddressMaxLenght)]
-        public string Address { get; set; } = null!;
+        public string? Address { get; set; }
 
         [Required]
         [Comment("Image Url")]
