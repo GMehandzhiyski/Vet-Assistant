@@ -11,6 +11,7 @@ namespace VetAssistant.Data.Seeding
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
 
+
             await SeedRoleAsync(roleManager, AdminRoleName);
         }
 

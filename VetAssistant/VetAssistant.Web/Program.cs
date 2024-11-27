@@ -1,8 +1,11 @@
+using VetAssistant.Data;
+using VetAssistant.Data.Seeding;
+
 namespace VetAssistant.Web
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -80,6 +83,40 @@ namespace VetAssistant.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            //Seed data on application startup
+
+            //Seed roles and admin user on application startup
+            using (var serviceScope = app.Services.CreateScope())
+            {
+                var serviceProvider = serviceScope.ServiceProvider;
+                var dbContext = serviceProvider.GetRequiredService<VetAssistantDbContext>();
+
+                // Seed roles
+                var roleSeeder = new RoleSeeder();
+                await roleSeeder.SeedAsync(dbContext, serviceProvider);
+
+                // Seed admin
+                var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+                var adminSeeder = new AdminSeeder(configuration);
+                await adminSeeder.SeedAsync(dbContext, serviceProvider);
+
+
+            }
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var roleManager =
+            //        scope.ServiceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
+
+            //    var roles = new[] { "Admin", "Manager", "Member" };
+
+            //    foreach (var role in roles)
+            //    {
+            //        if (await roleManager.RoleExistsAsync(role)
+            //           await roleManager.CreateAsync(new ApplicationRole(role));
+            //    }
+            //}
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
