@@ -32,6 +32,12 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Admin\Views\UserManagemet\" />
+    <Folder Include="Views\Booking\" />
+    <Folder Include="Views\Clinic\" />
+    <Folder Include="Views\Doctor\" />
+    <Folder Include="Views\Intervention\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Pet\" />
   </ItemGroup>
 
 </Project>
