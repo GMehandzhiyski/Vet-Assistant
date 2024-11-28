@@ -40,7 +40,7 @@
             public const int PhoneNumberMinLenght = 2;
             public const int PhoneNumberMaxLenght = 20;
 
-            public const int WorkingTimeMinLenght = 2;
+            public const int WorkingTimeMinLenght = 6;
             public const int WorkingTimeMaxLenght = 100;
         }
 

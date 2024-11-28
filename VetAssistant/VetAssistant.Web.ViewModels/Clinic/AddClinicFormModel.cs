@@ -29,38 +29,41 @@ namespace VetAssistant.Web.ViewModels.Clinic
             ErrorMessage = ErrorMessageNameLength)]
         public string Name { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = ErrorMessageTown)]
         [Comment("Clinic Town")]
-        [MaxLength(TownMaxLenght)]
+        [StringLength(TownMaxLenght,
+            MinimumLength = TownMinLenght,
+            ErrorMessage = ErrorMessageTownLength)]
         public string Town { get; set; } = string.Empty;
 
-        //[Required]
-        //[Comment("Clinic Address")]
-        //[MaxLength(AddressMaxLenght)]
-        //public string Address { get; set; } = string.Empty;
+        [Required(ErrorMessage = ErrorMessageAddress)]
+        [Comment("Clinic Address")]
+        [StringLength(AddressMaxLenght,
+            MinimumLength = AddressMinLenght)]
+        public string Address { get; set; } = string.Empty;
 
-        //[Required]
-        //[Comment("Country Id")]
-        //public Guid CountryId { get; set; }
+        [Comment("Country Id")]
+        public Guid CountryId { get; set; }
 
-        //[Required]
-        //[Comment("Country")]
-        //[ForeignKey(nameof(CountryId))]
-        //public Country Country { get; set; } = null!;
+        [Required(ErrorMessage = ErrorMessageEmail)]
+        [Comment("Clinic Email")]
+        [StringLength(EmailMaxLenght,
+            MinimumLength = EmailMinLenght,
+            ErrorMessage = ErrorMessageEmailLength)]
+        public string Email { get; set; } = string.Empty;
 
-        //[Required]
-        //[Comment("Clinic Email")]
-        //[MaxLength(EmailMaxLenght)]
-        //public string Email { get; set; } = string.Empty;
+        [Required(ErrorMessage = ErrorMessagePhoneNumber)]
+        [Comment("Clinic Phone Number")]
+        [StringLength(PhoneNumberMaxLenght,
+            MinimumLength = PhoneNumberMinLenght,
+            ErrorMessage = ErrorMessagePhoneNumberLength)]
+        public string PhoneNumber { get; set; } = null!;
 
-        //[Required]
-        //[Comment("Clinic Phone")]
-        //[MaxLength(PhoneNumberMaxLenght)]
-        //public string PhoneNumber { get; set; } = null!;
-
-        //[Required]
-        //[Comment("Clinic Working Time")]
-        //[MaxLength(WorkingTimeMaxLenght)]
-        //public string WorkingTime { get; set; } = null!;
+        [Required(ErrorMessage = ErrorMessageWorkingTime)]
+        [Comment("Clinic Working Time")]
+        [StringLength(WorkingTimeMaxLenght,
+            MinimumLength = WorkingTimeMinLenght,
+            ErrorMessage = ErrorMessageWorkingTimeLenght)]
+        public string WorkingTime { get; set; } = null!;
     }
 }
