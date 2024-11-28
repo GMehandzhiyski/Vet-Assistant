@@ -6,16 +6,16 @@ namespace VetAssistant.Service.Data.Contracts
     {
         //Task<IEnumerable<Clinic>> IndexGetAllOrderedByLocationAsync();
 
-        Task AddCinemaAsync(AddClinicFormModel model);
+        Task AddClinicAsync(AddClinicFormModel model);
 
-        Task<ClinicDetailsViewModel?> GetCinemaDetailsByIdAsync(Guid id);
+        Task<ClinicDetailsViewModel?> GetClinicDetailsByIdAsync(Guid id);
 
-        Task<EditClinicFormModel?> GetCinemaForEditByIdAsync(Guid id);
+        Task<EditClinicFormModel?> GetClinicForEditByIdAsync(Guid id);
 
-        //Task<bool> EditCinemaAsync(EditCinemaFormModel model);
+        Task<bool> EditClinicAsync(EditClinicFormModel model);
 
-        //Task<DeleteCinemaViewModel?> GetCinemaForDeleteByIdAsync(Guid id);
+        Task<DeleteClinicViewModel?> GetClinicForDeleteByIdAsync(Guid id);
 
-        //Task<bool> SoftDeleteCinemaAsync(Guid id);
+        Task<bool> SoftDeleteClinicAsync(Guid id);
     }
 }
