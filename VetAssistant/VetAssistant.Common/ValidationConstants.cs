@@ -127,5 +127,7 @@
             public const int DescriptionUserMinLenght = 5;
             public const int DescriptionUserMaxLenght = 500;
         }
+
+
     }
 }
