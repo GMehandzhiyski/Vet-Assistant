@@ -1,5 +1,9 @@
 using VetAssistant.Data;
+using VetAssistant.Data.Repository;
+using VetAssistant.Data.Repository.Interfaces;
 using VetAssistant.Data.Seeding;
+using VetAssistant.Service.Data;
+using VetAssistant.Service.Data.Contracts;
 
 namespace VetAssistant.Web
 {
@@ -66,6 +70,11 @@ namespace VetAssistant.Web
             builder.Services.AddApplicationServices(builder.Configuration);
             // I Add this to extension method
             //builder.Services.AddScoped<IRepository<Booking, Guid>, IRepository<Booking, Guid>>();
+            //builder.Services.AddScoped<IRepository<IClinicService, Guid>, Repository<ClinicService< Guid>>();
+            builder.Services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
+            builder.Services.AddScoped<IClinicService, ClinicService>();
+
+
 
 
             builder.Services.AddControllersWithViews();

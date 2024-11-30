@@ -1,0 +1,77 @@
+﻿@model VetAssistant.Web.ViewModels.Clinic.AddClinicFormModel
+
+@{
+    ViewData["Title"] = "Add Clinic";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2>@ViewData["Title"]</h2>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <form asp-action="Add" method="post" enctype="multipart/form-data">
+                <!-- Name -->
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Clinic Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <!-- Town -->
+                <div class="mb-3">
+                    <label asp-for="Town" class="form-label">Town</label>
+                    <input asp-for="Town" class="form-control" />
+                    <span asp-validation-for="Town" class="text-danger"></span>
+                </div>
+
+                <!-- Address -->
+                <div class="mb-3">
+                    <label asp-for="Address" class="form-label">Address</label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <!-- Country -->
+                <div class="mb-3">
+                    <label asp-for="CountryId" class="form-label">Country</label>
+                    <select asp-for="CountryId" class="form-control">
+                        <option value="">Select Country...</option>
+                        <!-- Populate with countries in the controller -->
+                    </select>
+                    <span asp-validation-for="CountryId" class="text-danger"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" type="email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                    <input asp-for="PhoneNumber" type="tel" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <!-- Working Time -->
+                <div class="mb-3">
+                    <label asp-for="WorkingTime" class="form-label">Working Time</label>
+                    <input asp-for="WorkingTime" class="form-control" />
+                    <span asp-validation-for="WorkingTime" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Save Clinic</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

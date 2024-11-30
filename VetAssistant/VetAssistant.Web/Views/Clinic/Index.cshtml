@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Clinic Management";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="btn-group" role="group" aria-label="Clinic Actions">
+    <a class="btn btn-primary" href="@Url.Action("Add", "Clinic")">Add Clinic</a>
+    <a class="btn btn-secondary" href="@Url.Action("Edit", "Clinic")">Edit Clinic</a>
+  @*   <a class="btn btn-danger" href="@Url.Action("Delete", "Clinic")">Delete Clinic</a> *@
+</div>

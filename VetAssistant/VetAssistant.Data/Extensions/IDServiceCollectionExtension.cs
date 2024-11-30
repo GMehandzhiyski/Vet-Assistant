@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using VetAssistant.Data;
 using VetAssistant.Data.Models;
 
+
+
 namespace Microsoft.Extensions.DependencyInjection
 {
 
@@ -51,6 +53,10 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             //services.AddScoped<IRepository<Booking, Guid>, Repository<Booking, Guid>>();
+            //services.AddScoped<IClinicService, ClinicService>(); ->  Is not working is need to be fixed
+
+
+
 
             return services;
         }
