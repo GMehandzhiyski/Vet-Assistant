@@ -17,6 +17,17 @@ a {
   border-color: #1861ac;
 }
 
+
+.btn-purple {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+}
+
+.btn-purple:hover {
+    background-color: #5a379c;
+ }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
@@ -46,3 +57,4 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+

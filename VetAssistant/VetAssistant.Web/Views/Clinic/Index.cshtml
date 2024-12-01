@@ -3,9 +3,27 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-
-<div class="btn-group" role="group" aria-label="Clinic Actions">
-    <a class="btn btn-primary" href="@Url.Action("Add", "Clinic")">Add Clinic</a>
-    <a class="btn btn-secondary" href="@Url.Action("Edit", "Clinic")">Edit Clinic</a>
-  @*   <a class="btn btn-danger" href="@Url.Action("Delete", "Clinic")">Delete Clinic</a> *@
+<div class="card-footer text-center">
+    <div class="btn-group" role="group" aria-label="Clinic Actions">
+        <a class="btn btn-primary d-flex justify-content-center align-items-center flex-fill mx-1" "
+            href="@Url.Action("Add", "Clinic")">Add Clinic</a>
+        <a class="btn btn-secondary d-flex justify-content-center align-items-center flex-fill mx-1"
+           href="@Url.Action("Edit", "Clinic")">Edit Clinic</a>
+        <a class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" 
+            onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+    </div>
 </div>
+
+
+@* <div class="card-footer text-center">
+    <div class="d-flex justify-content-between align-items-center">
+        <a asp-controller="Clinic" asp-action="Index" class="btn btn-warning d-flex justify-content-center align-items-center flex-fill mx-1">Back</a>
+            <form asp-controller="Clinic" asp-action="Index" method="post" class="d-flex justify-content-center align-items-center flex-fill mx-1">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <button type="submit" class="btn btn-success w-100">Buy</button>
+            </form>
+            <a asp-controller="Clinic" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary d-flex justify-content-center align-items-center flex-fill mx-1">Edit</a>
+            <a asp-controller="Clinic" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger d-flex justify-content-center align-items-center flex-fill mx-1" onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+        
+    </div>
+</div> *@

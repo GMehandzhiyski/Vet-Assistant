@@ -2,7 +2,7 @@
 
 namespace VetAssistant.Service.Data.Contracts
 {
-    public interface IClinicService
+    public interface IClinicService : IBaseService
     {
         //Task<IEnumerable<Clinic>> IndexGetAllOrderedByLocationAsync();
 

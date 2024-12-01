@@ -1,16 +1,13 @@
-﻿using VetAssistant.Data.Models;
-using VetAssistant.Data.Repository.Interfaces;
+﻿using VetAssistant.Data;
 using VetAssistant.Service.Data.Contracts;
 
 namespace VetAssistant.Service.Data
 {
     public class DoctorService : BaseService, IDoctorService
     {
-        private readonly IRepository<Doctor, Guid> doctorRepository;
-
-        public DoctorService(IRepository<Doctor, Guid> _doctorRepository)
+        public DoctorService(VetAssistantDbContext contextDoctor)
+            : base(contextDoctor)
         {
-            doctorRepository = _doctorRepository;
         }
     }
 }

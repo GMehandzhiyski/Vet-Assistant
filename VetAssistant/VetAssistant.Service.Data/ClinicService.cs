@@ -1,5 +1,5 @@
-﻿using VetAssistant.Data.Models;
-using VetAssistant.Data.Repository.Interfaces;
+﻿using VetAssistant.Data;
+using VetAssistant.Data.Models;
 using VetAssistant.Service.Data.Contracts;
 using VetAssistant.Web.ViewModels.Clinic;
 
@@ -7,16 +7,31 @@ namespace VetAssistant.Service.Data
 {
     public class ClinicService : BaseService, IClinicService
     {
-        private readonly IRepository<Clinic, Guid> clinicRepository;
-
-        public ClinicService(IRepository<Clinic, Guid> _clinicRepository)
+        public ClinicService(VetAssistantDbContext context)
+            : base(context)
         {
-            clinicRepository = _clinicRepository;
+
         }
-
-        public Task AddClinicAsync(AddClinicFormModel model)
+        public async Task AddClinicAsync(AddClinicFormModel model)
         {
-            throw new NotImplementedException();
+            Clinic newClinic = new Clinic()
+            {
+                CreatedOn = DateTime.Now,
+                IsDeleted = false,
+                Name = model.Name,
+                Town = model.Town,
+                Address = model.Address,
+                CountryId = model.CountryId,
+                Email = model.Email,
+                WorkingTime = model.WorkingTime,
+
+            };
+
+            await context.Clinics.AddAsync(newClinic);
+            await context.SaveChangesAsync();
+
+
+
         }
 
         public Task<bool> EditClinicAsync(EditClinicFormModel model)

@@ -7,6 +7,11 @@ namespace VetAssistant.Web.ViewModels.Clinic
 {
     public class AddClinicFormModel
     {
+        public AddClinicFormModel()
+        {
+            Countries = new List<CountryViewModel>();
+        }
+
         [Comment("Identifier")]
         public string Id { get; set; } = null!;
 
@@ -50,6 +55,7 @@ namespace VetAssistant.Web.ViewModels.Clinic
         [StringLength(EmailMaxLenght,
             MinimumLength = EmailMinLenght,
             ErrorMessage = ErrorMessageEmailLength)]
+        [RegularExpression(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", ErrorMessage = "Invalid email format.")]
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = ErrorMessagePhoneNumber)]
@@ -65,5 +71,7 @@ namespace VetAssistant.Web.ViewModels.Clinic
             MinimumLength = WorkingTimeMinLenght,
             ErrorMessage = ErrorMessageWorkingTimeLenght)]
         public string WorkingTime { get; set; } = null!;
+
+        public ICollection<CountryViewModel> Countries { get; set; }
     }
 }
