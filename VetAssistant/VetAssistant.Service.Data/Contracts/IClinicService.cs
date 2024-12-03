@@ -10,9 +10,9 @@ namespace VetAssistant.Service.Data.Contracts
 
         Task<ClinicDetailsViewModel?> GetClinicDetailsByIdAsync(Guid id);
 
-        Task<EditClinicFormModel?> GetClinicForEditByIdAsync(Guid id);
+        Task<AddClinicFormModel?> GetClinicForEditByIdAsync(Guid id);
 
-        Task<bool> EditClinicAsync(EditClinicFormModel model);
+        Task<bool> EditClinicAsync(AddClinicFormModel model);
 
         Task<DeleteClinicViewModel?> GetClinicForDeleteByIdAsync(Guid id);
 

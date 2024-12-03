@@ -13,7 +13,7 @@ namespace VetAssistant.Web.ViewModels.Clinic
         }
 
         [Comment("Identifier")]
-        public string Id { get; set; } = null!;
+        public Guid Id { get; set; }
 
         [Comment("Date of creation")]
         public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
@@ -47,6 +47,7 @@ namespace VetAssistant.Web.ViewModels.Clinic
             MinimumLength = AddressMinLenght)]
         public string Address { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = ErrorMessageCountry)]
         [Comment("Country Id")]
         public Guid CountryId { get; set; }
 

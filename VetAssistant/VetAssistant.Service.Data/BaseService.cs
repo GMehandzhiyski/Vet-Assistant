@@ -29,7 +29,7 @@ namespace VetAssistant.Service.Data
         public async Task<bool> IsCountryValid(Guid countryId)
         {
             return await context.Countries
-                .AllAsync(c => c.Id == countryId);
+                .AnyAsync(c => c.Id == countryId);
         }
 
         public bool IsGuidValid(string? id, ref Guid parseGuid)

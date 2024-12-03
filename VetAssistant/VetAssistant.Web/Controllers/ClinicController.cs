@@ -55,7 +55,8 @@ namespace VetAssistant.Web.Controllers
                 }
 
                 await data.AddClinicAsync(model);
-                return RedirectToAction("Index");
+
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception)
             {
@@ -65,10 +66,25 @@ namespace VetAssistant.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit()
+        public async Task<IActionResult> Edit(Guid id)
         {
-            var model = new AddClinicFormModel();
-            return View(model);
+            try
+            {
+                AddClinicFormModel? model = await data.GetClinicForEditByIdAsync(id);
+                if (model == null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+
+                model.Countries = await data.GetCountryAsync();
+
+                return View(model);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, "An error occurred while processing your request.");
+            }
+
         }
 
         [HttpGet]

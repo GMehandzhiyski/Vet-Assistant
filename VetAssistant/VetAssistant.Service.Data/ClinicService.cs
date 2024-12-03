@@ -1,4 +1,5 @@
-﻿using VetAssistant.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using VetAssistant.Data;
 using VetAssistant.Data.Models;
 using VetAssistant.Service.Data.Contracts;
 using VetAssistant.Web.ViewModels.Clinic;
@@ -24,6 +25,7 @@ namespace VetAssistant.Service.Data
                 CountryId = model.CountryId,
                 Email = model.Email,
                 WorkingTime = model.WorkingTime,
+                PhoneNumber = model.PhoneNumber,
 
             };
 
@@ -34,9 +36,24 @@ namespace VetAssistant.Service.Data
 
         }
 
-        public Task<bool> EditClinicAsync(EditClinicFormModel model)
+        public Task<AddClinicFormModel?> GetClinicForEditByIdAsync(Guid clinicId)
         {
-            throw new NotImplementedException();
+            return context.Clinics
+                .Where(c => c.IsDeleted == false)
+                .Where(c => c.Id == clinicId)
+                .Select(c => new AddClinicFormModel()
+                {
+                    Id = c.Id,
+                    CreatedOn = DateTime.Now,
+                    Name = c.Name,
+                    Town = c.Town,
+                    Address = c.Address,
+                    CountryId = c.CountryId,
+                    Email = c.Email,
+                    WorkingTime = c.WorkingTime,
+                    PhoneNumber = c.PhoneNumber,
+                })
+                .FirstOrDefaultAsync();
         }
 
         public Task<ClinicDetailsViewModel?> GetClinicDetailsByIdAsync(Guid id)
@@ -49,12 +66,13 @@ namespace VetAssistant.Service.Data
             throw new NotImplementedException();
         }
 
-        public Task<EditClinicFormModel?> GetClinicForEditByIdAsync(Guid id)
+
+        public Task<bool> SoftDeleteClinicAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> SoftDeleteClinicAsync(Guid id)
+        public Task<bool> EditClinicAsync(AddClinicFormModel model)
         {
             throw new NotImplementedException();
         }
